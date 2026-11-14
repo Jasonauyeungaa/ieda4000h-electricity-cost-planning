@@ -1,0 +1,19 @@
+{
+  "design": "Six predeclared dates across the existing test period. Exploratory schedule evaluation uses existing selected price weights.",
+  "dates": [
+    "2025-01-15",
+    "2025-06-26",
+    "2025-10-25",
+    "2026-03-11",
+    "2026-06-15",
+    "2026-10-15"
+  ],
+  "cases": 18,
+  "independent_verdicts": 36,
+  "all_checks_pass": true,
+  "linked_standard_positive_days": 4,
+  "linked_standard_negative_days": 2,
+  "linked_standard_total_actual_saving_aud": 128.62027378125003,
+  "maximum_flat_absolute_saving": 0.0,
+  "limitations": "Small exploratory historical sample. The same declared site, synthetic tariff and workload apply across dates. Regional demand forecasts do not supply site workload."
+}

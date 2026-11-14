@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+Data/outputs/run_*/
+Data/outputs/schedule_*.json
+Data/prediction/exports/

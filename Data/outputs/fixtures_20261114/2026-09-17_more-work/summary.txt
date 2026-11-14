@@ -1,0 +1,34 @@
+========================================================================
+  2026-09-17  |  scenario more-work  |  tariff linked
+========================================================================
+  forecast source : built_during_run:2026-09-17 (lstm, m3_20261110T081713Z)
+  run id          : schedule_20261114T092036358025
+
+  GPU-hours delivered : 37.50
+  total energy        : 261.0938 kWh
+  movable energy      : 21.0938 kWh  (8.08% of ENERGY)
+  movable cost        : A$2.0540 start-early (6.35% of bill)  |  A$1.8594 optimised (5.78% of bill)
+
+  FORECAST-PRICED (the LP objective)
+    start-early : A$32.3703
+    optimised   : A$32.1757
+    saving      : A$0.1946  (0.6012% of bill)
+
+  OBSERVED-PRICED (what the bill actually did)
+    start-early : A$32.2112
+    optimised   : A$31.9846
+    saving      : A$0.2267  (0.7037% of bill)
+
+  delta (movable-cost cut) : forecast 9.48%  |  observed 11.77%
+
+  checker verdicts : start-early PASS  |  optimised PASS
+  deadline windows : all jobs satisfied
+  grid power       : 14.50 kW of 40.0 kW cap  ->  OK
+    batch-a    9.00 of 9.00 GPU-h within 8.0 h window
+    batch-b    13.50 of 13.50 GPU-h within 10.0 h window
+    nightly    15.00 of 15.00 GPU-h within 4.0 h window
+
+  HEDGE  strike A$100/MWh, coverage 50%, 5.00 kW = 0.1200 MWh/day
+    forecast scenario : payoff A$-4.0220  -> net cost A$36.1977
+    observed replay   : payoff A$-4.0771  -> net cost A$36.0617
+========================================================================

@@ -1,0 +1,39 @@
+{
+  "version": "m3_20261110T081713Z",
+  "created_at": "2026-11-10T08:17:13.602408+00:00",
+  "note": "full M3 run: FNN/CNN/LSTM x FG1/FG2/FG3, daily origins, non-overlapping targets, splits train2016-2023 val2024 test2025-2026",
+  "seed": 0,
+  "epochs_max": 40,
+  "loss": "L1Loss (MAE)",
+  "optimizer": "Adam lr=1e-3 weight_decay=1e-4",
+  "batch": 256,
+  "early_stopping": "patience 6 on validation MAE",
+  "horizon": "48 half-hours / next 24h",
+  "origin_frequency": "1 per day (non-overlapping target windows)",
+  "recent_only": false,
+  "feature_definition": "Prior 96 price/demand slots, optional D-7 profile, origin weekday/annual/hour/regime/weekend calendar. All observations end at/before origin.",
+  "splits": {
+    "train": {
+      "first_origin": "2016-11-08 00:00:00",
+      "last_origin": "2023-12-31 00:00:00",
+      "n": 2610
+    },
+    "validation": {
+      "first_origin": "2024-01-01 00:00:00",
+      "last_origin": "2024-12-31 00:00:00",
+      "n": 366
+    },
+    "test": {
+      "first_origin": "2025-01-01 00:00:00",
+      "last_origin": "2026-10-31 00:00:00",
+      "n": 669
+    }
+  },
+  "data": {
+    "rows": 175296,
+    "first": "2016-11-01 00:00:00",
+    "last_end": "2026-11-01 00:00:00",
+    "regime": "30min pre-2021-10-01, 5min from 2021-10-01 (source_minutes)"
+  },
+  "spike_threshold_p99_train": 416.03387451171875
+}

@@ -1,0 +1,15 @@
+{
+  "source": "JiuwenSwarm native session history",
+  "session_id": "web_1a1d8e56e4f_65d679017fee",
+  "agent": "h-auditor",
+  "tool": "bash",
+  "call_line": 2784,
+  "result_line": 2785,
+  "tool_call_id": "call_00_fhxyump0lnkc8sl9774680q1",
+  "timestamp_utc": "2026-11-14T09:08:23.295818+00:00",
+  "command": "R=\"[4000H project]/Project\"; cd \"$R\" && time .venv/bin/python run_case.py --day 2026-09-17 --scenario more-work --hedge-strike 100 2>&1 | tail -42",
+  "saved_tool_result_preview": "success=True data={'content': 'Command: R=\"[4000H project]/Project\"; cd \"$R\" && time .venv/bin/python run_case.py --day 2026-09-17 --scenario more-work --hedge-strike 100 2>&1 | tail -42\\nStdout: ========================================================================\\n  2026-09-17  |  scenario more-work  |  tariff linked\\n========================================================================\\n  forecast source : built_during_run:2",
+  "preview_truncated_by_swarm": true,
+  "full_saved_output": "Data/outputs/fixtures_20261114/2026-09-17_more-work/summary.txt",
+  "verified_fixture_run": "schedule_20261114T092036358025"
+}

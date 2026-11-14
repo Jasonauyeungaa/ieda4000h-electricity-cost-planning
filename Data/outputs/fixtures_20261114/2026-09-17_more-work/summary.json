@@ -1,0 +1,77 @@
+{
+  "day": "2026-09-17",
+  "scenario": "more-work",
+  "tariff": "linked",
+  "forecast_source": "built_during_run:2026-09-17",
+  "model": "lstm",
+  "model_version": "m3_20261110T081713Z",
+  "export_id": "dac208de43ef51b134c1d421",
+  "run_id": "schedule_20261114T092036358025",
+  "forecast_mae_aud_per_mwh": 16.769942761527165,
+  "gpu_hours_delivered": 37.5,
+  "total_grid_energy_kwh": 261.09375,
+  "movable_energy_kwh": 21.09375,
+  "movable_energy_share_pct": 8.07899461400359,
+  "movable_cost": {
+    "asap_aud": 2.054041334760189,
+    "lp_aud": 1.8594178599715232,
+    "asap_share_pct": 6.345451319977078,
+    "lp_share_pct": 5.778955808899367
+  },
+  "forecast_priced": {
+    "asap_cost_aud": 32.370295368803,
+    "lp_cost_aud": 32.175671894014,
+    "saving_aud": 0.19462347478899744,
+    "saving_pct_of_bill": 0.6012409604904828
+  },
+  "observed_priced": {
+    "asap_cost_aud": 32.211240291667,
+    "lp_cost_aud": 31.984581197917,
+    "saving_aud": 0.22665909375000481,
+    "saving_pct_of_bill": 0.7036645956431586
+  },
+  "delta_forecast_pct": 9.475148892823448,
+  "delta_observed_pct": 11.765766497058783,
+  "checker_verdicts": {
+    "asap": "PASS",
+    "lp": "PASS"
+  },
+  "checks": {
+    "all_jobs_within_window": true,
+    "grid_power_cap_kw": 40.0,
+    "max_grid_power_kw": 14.5,
+    "grid_power_within_cap": true,
+    "per_job": {
+      "batch-a": {
+        "required_gpu_hours": 9.0,
+        "delivered_gpu_hours": 9.0,
+        "window_hours": 8.0,
+        "within_window": true
+      },
+      "batch-b": {
+        "required_gpu_hours": 13.5,
+        "delivered_gpu_hours": 13.5,
+        "window_hours": 10.0,
+        "within_window": true
+      },
+      "nightly": {
+        "required_gpu_hours": 15.0,
+        "delivered_gpu_hours": 15.0,
+        "window_hours": 4.0,
+        "within_window": true
+      }
+    }
+  },
+  "hedge": {
+    "strike_aud_per_mwh": 100.0,
+    "coverage": 0.5,
+    "hedged_kw": 5.0,
+    "hedged_mwh": 0.12,
+    "forecast_payoff_aud": -4.022038412094116,
+    "forecast_net_cost_aud": 36.19771030610812,
+    "observed_payoff_aud": -4.077116666666667,
+    "observed_net_cost_aud": 36.061697864583664
+  },
+  "output_dir": "Data/outputs/fixtures_20261114/2026-09-17_more-work",
+  "schedule_file": "Data/outputs/fixtures_20261114/2026-09-17_more-work/schedule_20261114T092036358025.json"
+}

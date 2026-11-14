@@ -1,0 +1,42 @@
+{
+  "type": "manual self-reproduction",
+  "setup": "Copied the optimizer, checker, Skill, README, requirements and one documented forecast into a fresh directory with empty outputs. Used the installed project Python dependencies.",
+  "skill": "Project/skills/compare-ai-electricity-cost/SKILL.md",
+  "workdir": "Project",
+  "command": "python optimize.py --input imports/forecast_aac8fe2222acaca756808516.json --scenario more-work --tariff linked",
+  "exit_code": 0,
+  "run_id": "schedule_20261114T132612126929",
+  "executed_at": "2026-11-14T13:26:12.127955+00:00",
+  "forecast_origin": "2026-10-15T00:00:00+10:00",
+  "input_sha256": "1730536937ac4b20e3f5884ba0a036cd65a4f879e784d68456efd339c71ac3f5",
+  "case_change": "From the 22 October standard demo (25 GPU-hours) to the 15 October forecast and more-work scenario (37.5 GPU-hours).",
+  "plans": [
+    {
+      "name": "Start early",
+      "forecast_cost_aud": 42.815728890562,
+      "observed_price_cost_aud": 45.7258168125,
+      "gpu_hours": 37.5,
+      "checker": "PASS",
+      "job_checks": [
+        "job batch-a: required=9.0000 GPU-h, done=9.000000, window_hours=8.0000, max_parallel=4.0000 -> OK",
+        "job batch-b: required=13.5000 GPU-h, done=13.500000, window_hours=10.0000, max_parallel=6.0000 -> OK",
+        "job nightly: required=15.0000 GPU-h, done=15.000000, window_hours=4.0000, max_parallel=8.0000 -> OK"
+      ]
+    },
+    {
+      "name": "Minimum forecast cost",
+      "forecast_cost_aud": 42.698765678883,
+      "observed_price_cost_aud": 45.6034591875,
+      "gpu_hours": 37.5,
+      "checker": "PASS",
+      "job_checks": [
+        "job batch-a: required=9.0000 GPU-h, done=9.000000, window_hours=8.0000, max_parallel=4.0000 -> OK",
+        "job batch-b: required=13.5000 GPU-h, done=13.500000, window_hours=10.0000, max_parallel=6.0000 -> OK",
+        "job nightly: required=15.0000 GPU-h, done=15.000000, window_hours=4.0000, max_parallel=8.0000 -> OK"
+      ]
+    }
+  ],
+  "forecast_cost_reduction_aud": 0.11696321167899981,
+  "observed_price_cost_reduction_aud": 0.12235762499999936,
+  "workswarm_skill_load_observed": false
+}

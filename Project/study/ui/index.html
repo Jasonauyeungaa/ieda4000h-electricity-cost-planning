@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Computing Electricity Cost · Electricity Cost Planning</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header>
+  <div><p class="eyebrow">ELECTRICITY COST PLANNING</p>
+  <h1>When should we run AI jobs?</h1>
+  <p>Compare electricity costs for a small AI company that needs to finish every job on time.</p></div>
+</header>
+<nav aria-label="Demo sections"><a href="#inputs">Run demo</a><a href="#results">Results</a><a href="#evidence">Study evidence</a><a href="/slides/Presentation.html" hidden>Slides</a></nav>
+<main>
+<section id="inputs">
+  <h2>Choose a forecast and tariff</h2>
+  <p>For the demo, use 11 March 2026 and 25 GPU-hours. Start with the wholesale-linked tariff, then try the flat tariff.</p>
+  <form id="run">
+    <div class="controls">
+      <label>Price forecast<select id="files"></select></label>
+      <label>Workload<select id="scenario"><option value="standard">25 GPU-hours</option><option value="more-work">37.5 GPU-hours</option><option value="earlier">Earlier deadlines</option></select></label>
+      <label>Tariff<select id="tariff"><option value="linked">Wholesale-linked</option><option value="flat">Flat · AUD 0.30/kWh</option></select></label>
+      <button id="solve" class="primary" disabled>Optimize and verify</button>
+    </div>
+    <details class="demo-details">
+      <summary>Compare a wholesale price hedge</summary>
+      <div class="controls">
+        <label class="hedge-toggle"><input type="checkbox" id="hedgeEnabled"> Include simulated hedge</label>
+        <label>Strike · AUD/MWh<input type="number" id="hedgeStrike" value="100" step="any" disabled required></label>
+        <label>Base load covered · %<input type="number" id="hedgeCoverage" value="50" min="1" max="100" step="any" disabled required></label>
+      </div>
+      <p class="small">Assumed contract terms. Available with the wholesale-linked tariff.</p>
+    </details>
+  </form>
+  <p id="status" class="notice" role="status">Looking for saved forecasts…</p>
+  <details class="demo-details"><summary>See the forecast and observed prices</summary>
+    <p id="provenance" class="small"></p><div class="chart"><canvas id="priceChart"></canvas></div><div id="sample"></div>
+  </details>
+  <details class="demo-details"><summary>Generate or import another forecast</summary>
+    <div class="controls">
+      <label>Import F forecast JSON<input type="file" id="upload" accept="application/json,.json"></label>
+      <button type="button" id="scan">Scan Data folder</button>
+    </div>
+    <div id="fileErrors"></div>
+    <form id="forecastRun">
+      <div class="controls">
+        <label>Forecast day · NEM time<input id="forecastDay" type="date" min="2025-01-01" value="2026-03-11" required></label>
+        <label>Price model<select id="forecastModel"><option value="auto">Best on validation</option><option value="lstm">LSTM</option><option value="cnn">CNN</option><option value="fnn">FNN</option><option value="prev-day">Previous day</option><option value="prev-week">Previous week</option></select></label>
+        <button id="generateForecast" class="primary">Run price and demand forecasts</button>
+      </div>
+      <p id="forecastStatus" class="notice" role="status">Uses the bundled forecasting models and a local data snapshot. Only the price forecast enters scheduling.</p>
+    </form>
+    <div id="demandPanel" class="panel" hidden><h3>NSW regional demand · MW</h3><p id="demandSummary"></p><div class="chart"><canvas id="demandChart"></canvas></div></div>
+  </details>
+</section>
+<section id="results">
+  <h2>Did it save money?</h2>
+  <p id="resultPlaceholder">Run a schedule to see the estimated bill, the replayed bill and the checks.</p>
+  <div id="resultBody" hidden>
+    <p id="runSummary" class="notice" role="status"></p>
+    <div id="costs"></div>
+    <p>Estimated cost uses forecast prices. Replayed cost applies observed prices to the two fixed schedules under the same tariff assumption.</p>
+    <div class="controls"><button id="compareTariff">Try the flat tariff</button><button id="download">Download result JSON</button></div>
+    <div id="tariffComparison"></div>
+    <section id="hedgeResult" class="panel" hidden>
+      <h3>How the hedge changes electricity expense</h3>
+      <p id="hedgeSummary"></p><div id="hedgeCosts"></div><p id="hedgeNote" class="small"></p>
+    </section>
+    <div class="panel"><h3>When each plan runs the GPUs</h3><div class="chart"><canvas id="scheduleChart"></canvas></div></div>
+    <details class="demo-details"><summary>Assumptions and independent checks</summary><p id="runMeta" class="small"></p><div id="assumptions"></div><div id="checks"></div><p id="limits" class="small"></p></details>
+  </div>
+</section>
+<section id="evidence">
+  <h2>What the six-day test showed</h2>
+  <div class="study-results">
+    <div><strong>4 of 6 days</strong><span>Lower replayed cost with the linked tariff and standard workload. Two days cost more.</span></div>
+    <div><strong>AUD 0</strong><span>Timing savings on each flat-tariff day.</span></div>
+    <div><strong>36 of 36</strong><span>Plan checks passed across 18 cases.</span></div>
+  </div>
+  <p>One day accounted for about 86% of the six-day net savings. This is a small historical test with a simulated tariff and workload.</p>
+  <details class="demo-details"><summary>How the scheduling and checks work</summary>
+    <dl><dt>Start early</dt><dd>Run each job as early as capacity allows.</dd><dt>Linear programming</dt><dd>Choose GPU time per half-hour to minimize rate × energy, while meeting the work, deadline and power limits.</dd><dt>Independent check</dt><dd>Recalculate completed GPU-hours, power and cost using the returned schedule.</dd></dl>
+    <p>A stronger next test would use a real tariff and measured site workload, then test more dates and price scenarios.</p>
+    <div id="methodMap"></div>
+  </details>
+</section>
+</main>
+<script src="/chart.js"></script><script src="/app.js"></script>
+</body>
+</html>

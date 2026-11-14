@@ -1,0 +1,1096 @@
+{
+  "generated_at": "2026-11-10T07:44:48.562579+00:00",
+  "requested_start": "2016-11-01",
+  "requested_end": "2026-11-01",
+  "files": [
+    {
+      "file": "PRICE_AND_DEMAND_201611_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "b530e76861f83143d6cb1e858ef05cba2f50a2840e655132b26977236afe57f8",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201612_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "a247b0a7eca059d738a7d75340725c8f3e0eec13059fba6bc1524e3e038cf331",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201701_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "0ec3722a70b3c37d8f203e26602725779c2d7fd70d5e48a3b995900776549427",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201702_NSW1.csv",
+      "raw_rows": 1344,
+      "halfhours": 1344,
+      "sha256": "3058ae684a31408126059f518c3d3dd87e41faf4ea0b5cedda586023034129a4",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201703_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "f1df923b15d4492a253efe515ced4227ef006403a7631a9feba074345895654a",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201704_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "018bb0eb70442c4b9919eaff1de32e11c7f155ce4339689fc389a11a1e7f661b",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201705_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "f774798f0a08297692d60015160b65ace2f4cc1e4de2ce33f0a2f529bdfc3a9c",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201706_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "1e1c4cbcc4863d4d16fa9f96665beac806b6f5dca8f4c8ff0909b07ab554fc92",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201707_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "cbff8dd0d49d883cc695e7f24ad854df7a0e5ff6899fb6783c96d88fa89c2074",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201708_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "84e905379fb5b6b15c107c9b0fab50ae26d9bacbc07e79256b0ab75c110b8866",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201709_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "c3afa3165427487566918f311d3e63832994e0c3490e1b0de58c1768ac140580",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201710_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "36cfb3c27d0b7173d7a1564e20b8ad77c2f1b27d37714abc60a8bb873c29b4fd",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201711_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "6a54f197a2013356e3838d17edb1cf8e0b73798637fa678f6cbd1d04612b036a",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201712_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "fbeed5cd325fc07adfca75fcb060587432273a9b6b55e05dc92de90feb26fe06",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201801_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "fe8a15354ddca78b4ec2fa627de789d7248cd2b7c68234edcac6c5106432d683",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201802_NSW1.csv",
+      "raw_rows": 1344,
+      "halfhours": 1344,
+      "sha256": "8842d7c4b3bb6df82240365c737f3663d6493d15e7fe3ec4c9e40cfba2d4f6ab",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201803_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "3b39ce091c24c7e13d8b66e03002a03311cfac48ad9813286b439603537538d5",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201804_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "72d75d0075327e67e64d44774adcf443a38ddce702a73cb003a2f7df504de69b",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201805_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "f136c01cad29ef35132b0d731c15c68864f23e7b8e2d0125ad60a670be9299fd",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201806_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "ad1a864a9f14e949ad3d804e8b0b06cb678e13830ee45f91635334c0a18a2a03",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201807_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "8f65542a507b9b451a9602d4b2755579bf30a4ae3378c0ff7238d47c2053f399",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201808_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "b5a96446528b44095b99aa0e3cf14c63a0e8a7ff64611566e79835438e035bdd",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201809_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "8100223bdbe5a7ff9ce3d421e5f6b6687945db591ed098501b0032ff6e79c03a",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201810_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "b4468dd5909b5774316c9d37c646a0190c38887fe9eaceaf8edd3baccf23acc8",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201811_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "7eade500e86394c2e4eb0fc62cec9318db8064862edb897b18d5844675add367",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201812_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "190bb5d64dc1a74efb57da7f89e23cbbd81948e7ae14e65457adf8d1316cd4a4",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201901_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "861cdac3220a44e6bc2f883554a976e709091fab8042160b0b9d5c4b54807628",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201902_NSW1.csv",
+      "raw_rows": 1344,
+      "halfhours": 1344,
+      "sha256": "835da8f599876a0f288b20f0c443a4e6708d0ff335afcc5047ed62ea7f44f2d4",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201903_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "dc67f92d5283b355da4389a245f02187d5f9087b960aba89cb3211862540e723",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201904_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "1a7ef02c522ec743bd4dad2f3404aa5d3acd868a634c2125c1c3e57f7b0aea7f",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201905_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "6b9549a13eba31f77fb1dd5bc4a0fbf74ada74cf4e8fdd7de52eddd7f08e4ab3",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201906_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "5941b3e1f57535c4f27eeb6dd9a64f96535262e315e5dc9f02326acbe8217c45",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201907_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "f344c8e3a53e56b582d406311b8375989af73922e90bc658b87a12eb3de1cfb8",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201908_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "1ad22a86152b3d30053b19a47ba3f4e988732121d6460e1cc38f70564f44c852",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201909_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "edf70d81d7576bc2659b81547927d0d0a889a3b963f9c6bec83360bd41d3c2a4",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201910_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "70656ebe38401279841106e7673d54de8962760498e2a2132a49661681a42c89",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201911_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "7388b3c7ebfcbed2cc290641c2d0764e08fbd3df542ca51f64cd9d0e92fb2529",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_201912_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "38db9651d3c8c976a60f5c85137ee664dc0b34086ca4092aed3b2070b6145e97",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202001_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "79252adc274aa5f6d4e424db8e38f00c46d4c0998df9b0bdfe9e9ea6345f9efc",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202002_NSW1.csv",
+      "raw_rows": 1392,
+      "halfhours": 1392,
+      "sha256": "eeb3def475fd426c8ece24e3cad541cb71031103e8ac9a8ebc5c7fa5e2d14502",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202003_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "c792c94bb904095bcb1ce483238d7b5ce7f2ac641117a4cd15c8765881e1f9b4",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202004_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "3c824a890d25f50c56fecda11bafbfbc42931858512cd3dad7fbe76a4f824069",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202005_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "99a9e0f92363539d4e468b2bbd8ce88492fd6656e6fa14c302addb56883fba78",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202006_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "90f4175e80f120bdd2629cbf01a17720c41ecf841ae8c78d801753cf6c13238a",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202007_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "27dda7e48be145ebae5ccd28dca4df50a9ea7f35b3d376b846f05f96e754efec",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202008_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "d0ec350872ebb755c5d102267619c07ca88cce33567d55099efa569d6e65305b",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202009_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "ef25d19fdcafe6a3891e6649120b6eedf2c6d267ab3e66ebf03ad49df9a01f58",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202010_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "ad3f2adbf2efff8f5c2bf0503b869297c092d9608a5fbe48c165983ee033e376",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202011_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "eb0429e14d7688ac0129e32c3eb56e4d520b09924b2c27db9f630ed2ccf15c79",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202012_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "6ccbc18110a154ee92019b3c6c49cc7ef2ca9f73dc10d133709d0801480098de",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202101_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "d9f011c2032a2bb820594b542c2e032f7900695c65a4683c8fd4ddd9b72f8234",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202102_NSW1.csv",
+      "raw_rows": 1344,
+      "halfhours": 1344,
+      "sha256": "be8389a8f2a24cd750af8872535136401cc758c99ae92fdb53bd781a79c60d07",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202103_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "9e3e9ba9184afa53afc806b934a1274b195d51e51a3b22445b4f4a1311672471",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202104_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "14b44f3fe41dbb745b0f8e9c52dccde1162a9143a3cf95242592b06aefe657cb",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202105_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "1111075cb01b73b794242eb4d029c6f00ea70699282b9184423b171e7475ba78",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202106_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "8745ea7143aa682838ae620a7a5bdebe157c247d5d3f1ea9eeb840858e271319",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202107_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "cabbc66c454fe69adc94397b88bb52189b6992616b06901c2d4c6dc3c1b335fa",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202108_NSW1.csv",
+      "raw_rows": 1488,
+      "halfhours": 1488,
+      "sha256": "02ca5830cc7039ad19509e10ff79ca1da6df865a9400d1f53420a780054bfde7",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202109_NSW1.csv",
+      "raw_rows": 1440,
+      "halfhours": 1440,
+      "sha256": "5e599ff957044488cf57f66f4c13715ac51c88c87764f82368365aab02a07c4e",
+      "source_minutes": [
+        30
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202110_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "6370f1d8599039dc0376c421b1e56e6fe749ff8aec787bd9b7fe009f786aa0c1",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202111_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "b7980da6d89a0c89f314d5df290d166df06425071206e045713c4410db56a171",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202112_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "d57464a286a1742d5a4b44d7eea72ff0c498f6fe37ecb7eed038c1da0a2f08b3",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202201_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "836aae87a56cf2e7a2bb2b6f243d186a8f4826b4f877bffe512d523c10e50750",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202202_NSW1.csv",
+      "raw_rows": 8064,
+      "halfhours": 1344,
+      "sha256": "40d46513950e5afbe1666d4c46dd1f9da147f57084f847fb5d9175fbfd307890",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202203_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "874f31b4dc56839e82ac0d7fbe7d4e36fcafc30dbafed1d04261409b13c8207f",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202204_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "bf90e92774d23d5ad3ba5e2f61e6bfe993147d38666e34ae981bde8b6f222e54",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202205_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "10916ded676d481add6e2cbcfaf30fa1fa733db4563f59115ad254aff073a7f4",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202206_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "290147dca6c68aa87005b3630322ea5592fd0ea762aab96d22725e6401d652a9",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202207_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "ba07ffa916d88eedef5661b1f2bf190e6d3013a011c2e015d1d1b8a70178593b",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202208_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "a47d71ceaf03091065d16628d77e42cb72ad03593cce75e9c39733759712252e",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202209_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "492576f3d4e557bea7790ae714167686bf4dc4b68d7f5615854c5fe585e813ca",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202210_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "66bd1a20072d32e737e0ed6aedeceaca5424d1e50747221b634093c8ca6c5b08",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202211_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "b184f88e1942a35063731448d8a2e83361d14e09575d4b87a3bf23c82a39497e",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202212_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "6f8449bb3667770de46a62a960657f37573acdc5e9669c14f33ba3ef9c9d72d9",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202301_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "352682f90a89c9220e17435f060cff68ebeba75c565f0b4365e17c3dd266590e",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202302_NSW1.csv",
+      "raw_rows": 8064,
+      "halfhours": 1344,
+      "sha256": "1061637963c9c803aefb70b1d92bdd1eaf6c20d1be45e8d046bd497bb9d0356f",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202303_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "e0ba4451c28236fbef544f133a0424ce440a415bf8342da85f1eaa69859e6363",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202304_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "b88a9abb9dab57b8c14a3b5ce601e59d53d37160ce966daaa99cdc7e1a3f69a0",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202305_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "4d4add87e1d07e28ed9b281c66f9e33356c304ee280950b4463208fc7f90d450",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202306_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "78fb40819ec6ce45a342315a22b7d23b15396204e302fc09734e317e4739dcfc",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202307_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "3b263f2ef0e04366439d028b9526614aeec2ff5c34323aa0cb8ebeaaa6110665",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202308_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "e9f79f18fff08200c444be2f35a336dd3dce091c63a63bde57da06d8e45c0f18",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202309_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "9727ad6634f1bdefa26f254adf71c8a2f2d9fbe96a32a43fc9e9222452a7c170",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202310_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "e9a201071965867e2d85f241dfe19a7b78fe65549ff29f6a52143d4afd1d9d42",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202311_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "991dd64960edfeafaf246210cb259e7894ea2a6fc07662bf802a62d38cd8fd66",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202312_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "bf2c620849988a7b5a4b1318a944310540429f033bc3530177b9ef06b7b1846e",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202401_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "f2c6b208d9ffd1fcf4b29fbbbcdb221b4747784bc3b079c20e73f071c8a7d2e4",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202402_NSW1.csv",
+      "raw_rows": 8352,
+      "halfhours": 1392,
+      "sha256": "1dec93ee822657093565d8f6d29d6335782ed394833d92cc880bb4bc2efc2471",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202403_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "b951315bcd7457361de0a91ea7d1f04b4ef35c60f5dbe1934eae9b20cccadc20",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202404_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "363834f7f4a8d65872dca455197998497981f0b53d39b348f91a13da5acdb2c3",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202405_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "06032aec8e949fc4d896563e1e3bc15a51af613e6d7da7cf0f4d72476915e20a",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202406_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "7eb1db210f04e7e0c5e790469ef5c243267e05dacf77e386d6f9ea574e7e2f3f",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202407_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "c5058ee196504d812e7745aabcf60af20d47c25448e02321fbd53462ed4b6bfe",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202408_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "4723dc699684da802ecdbaa6dda5cfeb6e7dd03710758cb142991873a551cdbb",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202409_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "60c4c36d12c0ca6e72ecfd7d8a6508a6703abde24e2ef11d35cd4ae1e0435ee1",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202410_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "49902457386583ab759cf2a799be032a55902675d73d71b5e1e0b6be91b2dd27",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202411_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "8e612744398bef2a3f57b190c6be66c00462c757e02d0cdb0472cf4e49048715",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202412_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "071b3aed47e626902171a0c8394d5c841345b9877a8666197f2334eda40ab7aa",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202501_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "975e8603457f1370f818c880e18a8a7f0c09794410a04d83a0b6f677dca9906a",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202502_NSW1.csv",
+      "raw_rows": 8064,
+      "halfhours": 1344,
+      "sha256": "2fe774a2dc257900ea734278de663dac63b95e5967a5b5e2384aa4d5df17a146",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202503_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "bc5589d85400e2ce9dcbf93232ca17676280f3b0d6369a208c37efb923a04986",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202504_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "164a09c6a1047767f23f15eb2ffdbfca4ada76b4cfef6f69e23a4cc8c9a25949",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202505_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "76132a704b56a633eccbdd4377998f7e23be636c77290082ad043684e8c4becb",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202506_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "e84113497898ea664896f3d18f14c1244c9cb66dc939ed36ca8e0e27e0339383",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202507_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "caeb430a075a74c53ac98b8021756f61fc1dd0c0c20c72cf61b3b7a846649ccc",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202508_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "7c5309b9cc14c4835f30e694c4599ec16be395e2cc69e1415358e375b2d64051",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202509_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "2216c9a6d76c16c76d3af1b459cef3b4d1e64a2ff79d8a4caabe156056f318b2",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202510_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "d0b438c469bff79b8a93d23c0ce87335f2b73159bebf41acfb7e722202e19303",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202511_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "11ce9a97a9ec6748eabe9fe436e4f90245a3da1fd39fb445261a824bbbf20572",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202512_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "d6c5968d4dda350edccc928c52b2dadc55a1df4aebfeb73cee7fa989a288565b",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202601_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "e925ec937ca6de5e79887519cfdb226c06917497ce8fd49062a8359b41924094",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202602_NSW1.csv",
+      "raw_rows": 8064,
+      "halfhours": 1344,
+      "sha256": "5ca85cec2a1fd6543f823268648639a873814b7254b2ecd8e94ce27b6b95dffb",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202603_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "afd51413c510e8a3a5f4401d6c1fbaa769cfdf8a85bd3f1ab403cd9d3e6f058f",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202604_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "17a7ebf9c322f2df3e55f6b743bc4829efa30fb891f3dc84a1965f038f9b2f94",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202605_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "7bb653e074dd7d5f7dd1153d75bb3aa790c6890afc54e0c23773da120b4df0d0",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202606_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "edcaaccc1871395f860ff4a1e0d6ae4db43302f6749d41a1e46f3ad30fc899e5",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202607_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "562dfb1d4b89f752f969b106b74a7b876cdd8ed2b670d305145c4aa8e967df30",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202608_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "3d2dfce2bc6df6e87276075176951ef3e4591b39d9c01f0e27928471a7053f63",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202609_NSW1.csv",
+      "raw_rows": 8640,
+      "halfhours": 1440,
+      "sha256": "85af3e1f68823c3eef87fcc98e5fa605c609b568ec64d6ef36b96722f8db8cd0",
+      "source_minutes": [
+        5
+      ]
+    },
+    {
+      "file": "PRICE_AND_DEMAND_202610_NSW1.csv",
+      "raw_rows": 8928,
+      "halfhours": 1488,
+      "sha256": "a598e52c1aae2ea6e72cb9d1e52f44461b6b8ff9c584843fc283b6dc38ecb28d",
+      "source_minutes": [
+        5
+      ]
+    }
+  ],
+  "months": 120,
+  "raw_rows": 620976,
+  "halfhours": 175296,
+  "first_start": "2016-11-01 00:00:00",
+  "last_end": "2026-11-01 00:00:00",
+  "missing_slots": 0,
+  "missing_sample": [],
+  "ten_years_complete": true,
+  "convention": "Pre-2021-10-01: 30-minute interval ends shifted -30m. Later: 5-minute ends shifted -5m, exactly six rows per half-hour. Fixed UTC+10. Raw files retained. Finalized-data replay is not an as-published historical replay."
+}

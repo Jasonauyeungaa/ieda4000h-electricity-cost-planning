@@ -1,0 +1,15 @@
+{
+  "x_mean": [
+    139.4160614013672
+  ],
+  "x_std": [
+    230.63035583496094
+  ],
+  "y_mean": 139.32925415039062,
+  "y_std": 230.659912109375,
+  "train_origins": 730,
+  "run_id": "m3_20261110T082820Z",
+  "feature_group": "FG1",
+  "history_sha256": "f8bc12c8be52b2900a0042907402eb0f863c9c9dcf0d41ea49a78a2a4cb9a8b0",
+  "provenance": "Deterministically reconstructed using the exact original training sample/scaler definition; saved for subsequent inference."
+}

@@ -1,0 +1,39 @@
+{
+  "version": "m3_20261110T082820Z",
+  "created_at": "2026-11-10T08:28:20.348216+00:00",
+  "note": "H comparison: recent-only train 2022-2023 (vs full 2016-2023), same val/test",
+  "seed": 0,
+  "epochs_max": 40,
+  "loss": "L1Loss (MAE)",
+  "optimizer": "Adam lr=1e-3 weight_decay=1e-4",
+  "batch": 256,
+  "early_stopping": "patience 6 on validation MAE",
+  "horizon": "48 half-hours / next 24h",
+  "origin_frequency": "1 per day (non-overlapping target windows)",
+  "recent_only": true,
+  "feature_definition": "Prior 96 price/demand slots, optional D-7 profile, origin weekday/annual/hour/regime/weekend calendar. All observations end at/before origin.",
+  "splits": {
+    "train": {
+      "first_origin": "2022-01-01 00:00:00",
+      "last_origin": "2023-12-31 00:00:00",
+      "n": 730
+    },
+    "validation": {
+      "first_origin": "2024-01-01 00:00:00",
+      "last_origin": "2024-12-31 00:00:00",
+      "n": 366
+    },
+    "test": {
+      "first_origin": "2025-01-01 00:00:00",
+      "last_origin": "2026-10-31 00:00:00",
+      "n": 669
+    }
+  },
+  "data": {
+    "rows": 175296,
+    "first": "2016-11-01 00:00:00",
+    "last_end": "2026-11-01 00:00:00",
+    "regime": "30min pre-2021-10-01, 5min from 2021-10-01 (source_minutes)"
+  },
+  "spike_threshold_p99_train": 573.9816284179688
+}
