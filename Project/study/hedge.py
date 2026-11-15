@@ -42,7 +42,7 @@ def compare(packet, plans, forecast, observed, convert, strike, coverage):
         'hedged_kw': hedged_kw,
         'hedged_mwh': volume_per_slot * len(forecast),
         'scenarios': rows,
-        'note': 'Hypothetical 24-hour contract for difference on NSW1 wholesale prices. '
+        'note': 'Hypothetical contract for difference on NSW1 wholesale prices over the planning horizon. '
                 'A fixed volume settles in each half-hour against the assumed strike. '
                 'The retail tariff has a multiplier and floor, so some exposure remains. '
                 'Stress cases have no assigned probabilities. Fees and margin are excluded.',

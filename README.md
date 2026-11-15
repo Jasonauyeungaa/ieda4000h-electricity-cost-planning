@@ -26,6 +26,24 @@ Use `--day 2026-09-17 --scenario more-work` with the same strike to reproduce th
 .venv/bin/python run_case.py --input outputs/fixtures_20261114/2026-10-22_standard/forecast_7bd4a665621df0c8aab77780.json --scenario standard --hedge-strike 100
 ```
 
+## Open the browser app
+
+After installing dependencies, double-click `Project/START_WEBAPP.command` on macOS, or run
+`.venv/bin/python -m study.server` from `Project` and open [the local workbench](http://127.0.0.1:8156/).
+The HTML, CSS and JavaScript are in `Project/study/ui`. The browser calls the local Python
+server to run real inference and optimization. It can inspect the original monthly AEMO CSV
+rows and view both schedules, costs and the independent checks.
+
+Run the historical demo with **22 Oct demo → Run model → Results**. In **Compare**, the app
+shows each model's price error and how much its independently checked schedule would cost at
+the same later-observed prices. The [six-date results](Data/outputs/planning_model_evaluation.json)
+can be rebuilt with `.venv/bin/python -m study.evaluate_planning`.
+
+In **Live AEMO**, refresh the five-minute observation or run a plan on AEMO's latest
+Pre-dispatch report. The live buttons require internet access and no API key. Job windows in
+this demo are shorter and the horizon depends on the published report. Future observed
+costs are pending. See [the app guide](Project/README.md) for inputs, saved files and limitations.
+
 ## Reuse the Skill
 
 Follow [compare-ai-electricity-cost](Project/skills/compare-ai-electricity-cost/SKILL.md). The changed example imports the 15 October 2026 forecast, completes 37.5 GPU-hours and returns two PASS verdicts:

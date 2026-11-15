@@ -7,3 +7,10 @@ __pycache__/
 Data/outputs/run_*/
 Data/outputs/schedule_*.json
 Data/prediction/exports/
+Data/app-logs/
+Data/outputs/workbench/
+Data/outputs/live_market/latest_dispatch.json
+Data/outputs/live_market/forecast_*.json
+Data/outputs/live_market/schedule_*.json
+!Data/outputs/live_market/forecast_20261115T1230_5d6d2960468f75.json
+!Data/outputs/live_market/schedule_20261115T020514821635.json

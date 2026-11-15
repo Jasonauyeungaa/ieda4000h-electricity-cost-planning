@@ -1,0 +1,207 @@
+{
+  "schema": "electricity.forecast.v2",
+  "export_id": "20261115T1230_5d6d2960468f75",
+  "region": "NSW1",
+  "currency": "AUD",
+  "price_unit": "AUD/MWh",
+  "interval_minutes": 30,
+  "model": "aemo-predispatch",
+  "model_version": "2026-11-15T12:01:14+10:00",
+  "kind": "live_aemo_predispatch",
+  "generated_at": "2026-11-15T12:05:14.787737+10:00",
+  "forecast_origin": "2026-11-15T12:30:00+10:00",
+  "input_cutoff": "2026-11-15T12:01:14+10:00",
+  "source_url": "https://www.nemweb.com.au/Reports/CURRENT/Predispatch_Reports/PUBLIC_PREDISPATCH_202611151230_20261115120114_LEGACY.zip",
+  "source_sha256": "5d6d2960468f751f413f10b681522c3fb68dca3d69a1a01d647261724e08b377",
+  "slots": [
+    {
+      "target_start": "2026-11-15T12:30:00+10:00",
+      "target_end": "2026-11-15T13:00:00+10:00",
+      "price": 99.02
+    },
+    {
+      "target_start": "2026-11-15T13:00:00+10:00",
+      "target_end": "2026-11-15T13:30:00+10:00",
+      "price": 99.02
+    },
+    {
+      "target_start": "2026-11-15T13:30:00+10:00",
+      "target_end": "2026-11-15T14:00:00+10:00",
+      "price": 88.88003
+    },
+    {
+      "target_start": "2026-11-15T14:00:00+10:00",
+      "target_end": "2026-11-15T14:30:00+10:00",
+      "price": 84.05671
+    },
+    {
+      "target_start": "2026-11-15T14:30:00+10:00",
+      "target_end": "2026-11-15T15:00:00+10:00",
+      "price": 89.75826
+    },
+    {
+      "target_start": "2026-11-15T15:00:00+10:00",
+      "target_end": "2026-11-15T15:30:00+10:00",
+      "price": 93.02
+    },
+    {
+      "target_start": "2026-11-15T15:30:00+10:00",
+      "target_end": "2026-11-15T16:00:00+10:00",
+      "price": 101.89
+    },
+    {
+      "target_start": "2026-11-15T16:00:00+10:00",
+      "target_end": "2026-11-15T16:30:00+10:00",
+      "price": 94.58
+    },
+    {
+      "target_start": "2026-11-15T16:30:00+10:00",
+      "target_end": "2026-11-15T17:00:00+10:00",
+      "price": 127.66443
+    },
+    {
+      "target_start": "2026-11-15T17:00:00+10:00",
+      "target_end": "2026-11-15T17:30:00+10:00",
+      "price": 105.99
+    },
+    {
+      "target_start": "2026-11-15T17:30:00+10:00",
+      "target_end": "2026-11-15T18:00:00+10:00",
+      "price": 121.28921
+    },
+    {
+      "target_start": "2026-11-15T18:00:00+10:00",
+      "target_end": "2026-11-15T18:30:00+10:00",
+      "price": 146.11
+    },
+    {
+      "target_start": "2026-11-15T18:30:00+10:00",
+      "target_end": "2026-11-15T19:00:00+10:00",
+      "price": 163.38521
+    },
+    {
+      "target_start": "2026-11-15T19:00:00+10:00",
+      "target_end": "2026-11-15T19:30:00+10:00",
+      "price": 174.97523
+    },
+    {
+      "target_start": "2026-11-15T19:30:00+10:00",
+      "target_end": "2026-11-15T20:00:00+10:00",
+      "price": 230.0
+    },
+    {
+      "target_start": "2026-11-15T20:00:00+10:00",
+      "target_end": "2026-11-15T20:30:00+10:00",
+      "price": 189.48893
+    },
+    {
+      "target_start": "2026-11-15T20:30:00+10:00",
+      "target_end": "2026-11-15T21:00:00+10:00",
+      "price": 162.35143
+    },
+    {
+      "target_start": "2026-11-15T21:00:00+10:00",
+      "target_end": "2026-11-15T21:30:00+10:00",
+      "price": 196.7634
+    },
+    {
+      "target_start": "2026-11-15T21:30:00+10:00",
+      "target_end": "2026-11-15T22:00:00+10:00",
+      "price": 154.08661
+    },
+    {
+      "target_start": "2026-11-15T22:00:00+10:00",
+      "target_end": "2026-11-15T22:30:00+10:00",
+      "price": 129.0
+    },
+    {
+      "target_start": "2026-11-15T22:30:00+10:00",
+      "target_end": "2026-11-15T23:00:00+10:00",
+      "price": 166.22553
+    },
+    {
+      "target_start": "2026-11-15T23:00:00+10:00",
+      "target_end": "2026-11-15T23:30:00+10:00",
+      "price": 150.01
+    },
+    {
+      "target_start": "2026-11-15T23:30:00+10:00",
+      "target_end": "2026-11-16T00:00:00+10:00",
+      "price": 150.01
+    },
+    {
+      "target_start": "2026-11-16T00:00:00+10:00",
+      "target_end": "2026-11-16T00:30:00+10:00",
+      "price": 185.54746
+    },
+    {
+      "target_start": "2026-11-16T00:30:00+10:00",
+      "target_end": "2026-11-16T01:00:00+10:00",
+      "price": 136.10309
+    },
+    {
+      "target_start": "2026-11-16T01:00:00+10:00",
+      "target_end": "2026-11-16T01:30:00+10:00",
+      "price": 120.01
+    },
+    {
+      "target_start": "2026-11-16T01:30:00+10:00",
+      "target_end": "2026-11-16T02:00:00+10:00",
+      "price": 120.01
+    },
+    {
+      "target_start": "2026-11-16T02:00:00+10:00",
+      "target_end": "2026-11-16T02:30:00+10:00",
+      "price": 120.01
+    },
+    {
+      "target_start": "2026-11-16T02:30:00+10:00",
+      "target_end": "2026-11-16T03:00:00+10:00",
+      "price": 119.62451
+    },
+    {
+      "target_start": "2026-11-16T03:00:00+10:00",
+      "target_end": "2026-11-16T03:30:00+10:00",
+      "price": 120.01
+    },
+    {
+      "target_start": "2026-11-16T03:30:00+10:00",
+      "target_end": "2026-11-16T04:00:00+10:00",
+      "price": 129.0
+    }
+  ],
+  "evaluation_actuals": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "limitations": "Future wholesale estimates from AEMO Pre-dispatch. Live demo jobs use shorter windows relative to horizon start."
+}

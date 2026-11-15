@@ -1,0 +1,2070 @@
+{
+  "run_id": "schedule_20261115T020514821635",
+  "executed_at": "2026-11-15T02:05:14.821643+00:00",
+  "input_file": "outputs/live_market/forecast_20261115T1230_5d6d2960468f75.json",
+  "input_sha256": "519ad2dc24865bee144abd4d7cc5ff6028cad280de4efb9ed7e186b0bd83aeeb",
+  "forecast": {
+    "schema": "electricity.forecast.v2",
+    "export_id": "20261115T1230_5d6d2960468f75",
+    "region": "NSW1",
+    "currency": "AUD",
+    "price_unit": "AUD/MWh",
+    "interval_minutes": 30,
+    "model": "aemo-predispatch",
+    "model_version": "2026-11-15T12:01:14+10:00",
+    "kind": "live_aemo_predispatch",
+    "generated_at": "2026-11-15T12:05:14.787737+10:00",
+    "forecast_origin": "2026-11-15T12:30:00+10:00",
+    "input_cutoff": "2026-11-15T12:01:14+10:00",
+    "source_url": "https://www.nemweb.com.au/Reports/CURRENT/Predispatch_Reports/PUBLIC_PREDISPATCH_202611151230_20261115120114_LEGACY.zip",
+    "source_sha256": "5d6d2960468f751f413f10b681522c3fb68dca3d69a1a01d647261724e08b377",
+    "slots": [
+      {
+        "target_start": "2026-11-15T12:30:00+10:00",
+        "target_end": "2026-11-15T13:00:00+10:00",
+        "price": 99.02
+      },
+      {
+        "target_start": "2026-11-15T13:00:00+10:00",
+        "target_end": "2026-11-15T13:30:00+10:00",
+        "price": 99.02
+      },
+      {
+        "target_start": "2026-11-15T13:30:00+10:00",
+        "target_end": "2026-11-15T14:00:00+10:00",
+        "price": 88.88003
+      },
+      {
+        "target_start": "2026-11-15T14:00:00+10:00",
+        "target_end": "2026-11-15T14:30:00+10:00",
+        "price": 84.05671
+      },
+      {
+        "target_start": "2026-11-15T14:30:00+10:00",
+        "target_end": "2026-11-15T15:00:00+10:00",
+        "price": 89.75826
+      },
+      {
+        "target_start": "2026-11-15T15:00:00+10:00",
+        "target_end": "2026-11-15T15:30:00+10:00",
+        "price": 93.02
+      },
+      {
+        "target_start": "2026-11-15T15:30:00+10:00",
+        "target_end": "2026-11-15T16:00:00+10:00",
+        "price": 101.89
+      },
+      {
+        "target_start": "2026-11-15T16:00:00+10:00",
+        "target_end": "2026-11-15T16:30:00+10:00",
+        "price": 94.58
+      },
+      {
+        "target_start": "2026-11-15T16:30:00+10:00",
+        "target_end": "2026-11-15T17:00:00+10:00",
+        "price": 127.66443
+      },
+      {
+        "target_start": "2026-11-15T17:00:00+10:00",
+        "target_end": "2026-11-15T17:30:00+10:00",
+        "price": 105.99
+      },
+      {
+        "target_start": "2026-11-15T17:30:00+10:00",
+        "target_end": "2026-11-15T18:00:00+10:00",
+        "price": 121.28921
+      },
+      {
+        "target_start": "2026-11-15T18:00:00+10:00",
+        "target_end": "2026-11-15T18:30:00+10:00",
+        "price": 146.11
+      },
+      {
+        "target_start": "2026-11-15T18:30:00+10:00",
+        "target_end": "2026-11-15T19:00:00+10:00",
+        "price": 163.38521
+      },
+      {
+        "target_start": "2026-11-15T19:00:00+10:00",
+        "target_end": "2026-11-15T19:30:00+10:00",
+        "price": 174.97523
+      },
+      {
+        "target_start": "2026-11-15T19:30:00+10:00",
+        "target_end": "2026-11-15T20:00:00+10:00",
+        "price": 230.0
+      },
+      {
+        "target_start": "2026-11-15T20:00:00+10:00",
+        "target_end": "2026-11-15T20:30:00+10:00",
+        "price": 189.48893
+      },
+      {
+        "target_start": "2026-11-15T20:30:00+10:00",
+        "target_end": "2026-11-15T21:00:00+10:00",
+        "price": 162.35143
+      },
+      {
+        "target_start": "2026-11-15T21:00:00+10:00",
+        "target_end": "2026-11-15T21:30:00+10:00",
+        "price": 196.7634
+      },
+      {
+        "target_start": "2026-11-15T21:30:00+10:00",
+        "target_end": "2026-11-15T22:00:00+10:00",
+        "price": 154.08661
+      },
+      {
+        "target_start": "2026-11-15T22:00:00+10:00",
+        "target_end": "2026-11-15T22:30:00+10:00",
+        "price": 129.0
+      },
+      {
+        "target_start": "2026-11-15T22:30:00+10:00",
+        "target_end": "2026-11-15T23:00:00+10:00",
+        "price": 166.22553
+      },
+      {
+        "target_start": "2026-11-15T23:00:00+10:00",
+        "target_end": "2026-11-15T23:30:00+10:00",
+        "price": 150.01
+      },
+      {
+        "target_start": "2026-11-15T23:30:00+10:00",
+        "target_end": "2026-11-16T00:00:00+10:00",
+        "price": 150.01
+      },
+      {
+        "target_start": "2026-11-16T00:00:00+10:00",
+        "target_end": "2026-11-16T00:30:00+10:00",
+        "price": 185.54746
+      },
+      {
+        "target_start": "2026-11-16T00:30:00+10:00",
+        "target_end": "2026-11-16T01:00:00+10:00",
+        "price": 136.10309
+      },
+      {
+        "target_start": "2026-11-16T01:00:00+10:00",
+        "target_end": "2026-11-16T01:30:00+10:00",
+        "price": 120.01
+      },
+      {
+        "target_start": "2026-11-16T01:30:00+10:00",
+        "target_end": "2026-11-16T02:00:00+10:00",
+        "price": 120.01
+      },
+      {
+        "target_start": "2026-11-16T02:00:00+10:00",
+        "target_end": "2026-11-16T02:30:00+10:00",
+        "price": 120.01
+      },
+      {
+        "target_start": "2026-11-16T02:30:00+10:00",
+        "target_end": "2026-11-16T03:00:00+10:00",
+        "price": 119.62451
+      },
+      {
+        "target_start": "2026-11-16T03:00:00+10:00",
+        "target_end": "2026-11-16T03:30:00+10:00",
+        "price": 120.01
+      },
+      {
+        "target_start": "2026-11-16T03:30:00+10:00",
+        "target_end": "2026-11-16T04:00:00+10:00",
+        "price": 129.0
+      }
+    ],
+    "evaluation_actuals": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "limitations": "Future wholesale estimates from AEMO Pre-dispatch. Live demo jobs use shorter windows relative to horizon start."
+  },
+  "scenario": "more-work",
+  "tariff": "linked",
+  "assumptions": {
+    "linked": "max(wholesale AUD/MWh / 1000 * 1.9, 0.001) AUD/kWh",
+    "flat": "0.30 AUD/kWh",
+    "site": "8 kW base, 0.45 kW/GPU, PUE 1.25, 24 GPU, grid cap 40 kW",
+    "job_timing": "Release/deadline offsets relative to the start of the exported 24-hour horizon"
+  },
+  "plans": [
+    {
+      "name": "Start early",
+      "plan": {
+        "schema_version": "1.0",
+        "label": "Declared computing-workload study",
+        "mode": "asap",
+        "status": "feasible",
+        "infeasibility_reasons": [],
+        "schedule": [
+          {
+            "interval_index": 0,
+            "start_iso": "2026-11-15T12:30:00+10:00",
+            "end_iso": "2026-11-15T13:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 5.0
+            },
+            "total_allocation_gpu": 5.0,
+            "it_power_kw": 10.25,
+            "grid_power_kw": 12.8125,
+            "grid_energy_kwh": 6.40625,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 1.2052590625
+          },
+          {
+            "interval_index": 1,
+            "start_iso": "2026-11-15T13:00:00+10:00",
+            "end_iso": "2026-11-15T13:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 5.0
+            },
+            "total_allocation_gpu": 5.0,
+            "it_power_kw": 10.25,
+            "grid_power_kw": 12.8125,
+            "grid_energy_kwh": 6.40625,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 1.2052590625
+          },
+          {
+            "interval_index": 2,
+            "start_iso": "2026-11-15T13:30:00+10:00",
+            "end_iso": "2026-11-15T14:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 5.0,
+              "batch-b": 6.0
+            },
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.168872057,
+            "cost_currency": 1.366808211344
+          },
+          {
+            "interval_index": 3,
+            "start_iso": "2026-11-15T14:00:00+10:00",
+            "end_iso": "2026-11-15T14:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 3.0,
+              "batch-b": 6.0
+            },
+            "total_allocation_gpu": 9.0,
+            "it_power_kw": 12.05,
+            "grid_power_kw": 15.0625,
+            "grid_energy_kwh": 7.53125,
+            "price_currency_per_kwh": 0.15970774899999998,
+            "cost_currency": 1.202798984656
+          },
+          {
+            "interval_index": 4,
+            "start_iso": "2026-11-15T14:30:00+10:00",
+            "end_iso": "2026-11-15T15:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-b": 6.0,
+              "nightly": 8.0
+            },
+            "total_allocation_gpu": 14.0,
+            "it_power_kw": 14.3,
+            "grid_power_kw": 17.875,
+            "grid_energy_kwh": 8.9375,
+            "price_currency_per_kwh": 0.170540694,
+            "cost_currency": 1.524207452625
+          },
+          {
+            "interval_index": 5,
+            "start_iso": "2026-11-15T15:00:00+10:00",
+            "end_iso": "2026-11-15T15:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-b": 6.0,
+              "nightly": 8.0
+            },
+            "total_allocation_gpu": 14.0,
+            "it_power_kw": 14.3,
+            "grid_power_kw": 17.875,
+            "grid_energy_kwh": 8.9375,
+            "price_currency_per_kwh": 0.17673799999999998,
+            "cost_currency": 1.579595875
+          },
+          {
+            "interval_index": 6,
+            "start_iso": "2026-11-15T15:30:00+10:00",
+            "end_iso": "2026-11-15T16:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-b": 3.0,
+              "nightly": 8.0
+            },
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.19359099999999999,
+            "cost_currency": 1.56687715625
+          },
+          {
+            "interval_index": 7,
+            "start_iso": "2026-11-15T16:00:00+10:00",
+            "end_iso": "2026-11-15T16:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "nightly": 6.0
+            },
+            "total_allocation_gpu": 6.0,
+            "it_power_kw": 10.7,
+            "grid_power_kw": 13.375,
+            "grid_energy_kwh": 6.6875,
+            "price_currency_per_kwh": 0.17970199999999997,
+            "cost_currency": 1.201757125
+          },
+          {
+            "interval_index": 8,
+            "start_iso": "2026-11-15T16:30:00+10:00",
+            "end_iso": "2026-11-15T17:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24256241699999997,
+            "cost_currency": 1.212812085
+          },
+          {
+            "interval_index": 9,
+            "start_iso": "2026-11-15T17:00:00+10:00",
+            "end_iso": "2026-11-15T17:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.201381,
+            "cost_currency": 1.006905
+          },
+          {
+            "interval_index": 10,
+            "start_iso": "2026-11-15T17:30:00+10:00",
+            "end_iso": "2026-11-15T18:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.23044949899999997,
+            "cost_currency": 1.152247495
+          },
+          {
+            "interval_index": 11,
+            "start_iso": "2026-11-15T18:00:00+10:00",
+            "end_iso": "2026-11-15T18:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.277609,
+            "cost_currency": 1.388045
+          },
+          {
+            "interval_index": 12,
+            "start_iso": "2026-11-15T18:30:00+10:00",
+            "end_iso": "2026-11-15T19:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.310431899,
+            "cost_currency": 1.552159495
+          },
+          {
+            "interval_index": 13,
+            "start_iso": "2026-11-15T19:00:00+10:00",
+            "end_iso": "2026-11-15T19:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.332452937,
+            "cost_currency": 1.662264685
+          },
+          {
+            "interval_index": 14,
+            "start_iso": "2026-11-15T19:30:00+10:00",
+            "end_iso": "2026-11-15T20:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.437,
+            "cost_currency": 2.185
+          },
+          {
+            "interval_index": 15,
+            "start_iso": "2026-11-15T20:00:00+10:00",
+            "end_iso": "2026-11-15T20:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.360028967,
+            "cost_currency": 1.800144835
+          },
+          {
+            "interval_index": 16,
+            "start_iso": "2026-11-15T20:30:00+10:00",
+            "end_iso": "2026-11-15T21:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.308467717,
+            "cost_currency": 1.542338585
+          },
+          {
+            "interval_index": 17,
+            "start_iso": "2026-11-15T21:00:00+10:00",
+            "end_iso": "2026-11-15T21:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.37385045999999994,
+            "cost_currency": 1.8692523
+          },
+          {
+            "interval_index": 18,
+            "start_iso": "2026-11-15T21:30:00+10:00",
+            "end_iso": "2026-11-15T22:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.29276455900000004,
+            "cost_currency": 1.463822795
+          },
+          {
+            "interval_index": 19,
+            "start_iso": "2026-11-15T22:00:00+10:00",
+            "end_iso": "2026-11-15T22:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          },
+          {
+            "interval_index": 20,
+            "start_iso": "2026-11-15T22:30:00+10:00",
+            "end_iso": "2026-11-15T23:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.3158285069999999,
+            "cost_currency": 1.579142535
+          },
+          {
+            "interval_index": 21,
+            "start_iso": "2026-11-15T23:00:00+10:00",
+            "end_iso": "2026-11-15T23:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 22,
+            "start_iso": "2026-11-15T23:30:00+10:00",
+            "end_iso": "2026-11-16T00:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 23,
+            "start_iso": "2026-11-16T00:00:00+10:00",
+            "end_iso": "2026-11-16T00:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.352540174,
+            "cost_currency": 1.76270087
+          },
+          {
+            "interval_index": 24,
+            "start_iso": "2026-11-16T00:30:00+10:00",
+            "end_iso": "2026-11-16T01:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.25859587100000003,
+            "cost_currency": 1.292979355
+          },
+          {
+            "interval_index": 25,
+            "start_iso": "2026-11-16T01:00:00+10:00",
+            "end_iso": "2026-11-16T01:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 26,
+            "start_iso": "2026-11-16T01:30:00+10:00",
+            "end_iso": "2026-11-16T02:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 27,
+            "start_iso": "2026-11-16T02:00:00+10:00",
+            "end_iso": "2026-11-16T02:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 28,
+            "start_iso": "2026-11-16T02:30:00+10:00",
+            "end_iso": "2026-11-16T03:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.227286569,
+            "cost_currency": 1.136432845
+          },
+          {
+            "interval_index": 29,
+            "start_iso": "2026-11-16T03:00:00+10:00",
+            "end_iso": "2026-11-16T03:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 30,
+            "start_iso": "2026-11-16T03:30:00+10:00",
+            "end_iso": "2026-11-16T04:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          }
+        ],
+        "summary": {
+          "total_gpu_hours": 37.5,
+          "total_grid_energy_kwh": 176.09375,
+          "total_cost_currency": 43.320380809875,
+          "currency": "AUD",
+          "budget_headroom_currency": null,
+          "shortfall_gpu_hours": 0.0,
+          "late_jobs": []
+        },
+        "meta": {
+          "tool": "ai_compute ASAP v1.0",
+          "solver": "greedy (work-conserving, tie=earliest deadline then job id)",
+          "label_synthetic": true
+        }
+      },
+      "check": {
+        "verdict": "PASS",
+        "status_under_test": "feasible",
+        "currency": "AUD",
+        "issues": [],
+        "checks": [
+          "job batch-a: required=9.0000 GPU-h, done=9.000000, window_hours=4.0000, max_parallel=5.0000 -> OK",
+          "job batch-b: required=13.5000 GPU-h, done=13.500000, window_hours=5.0000, max_parallel=6.0000 -> OK",
+          "job nightly: required=15.0000 GPU-h, done=15.000000, window_hours=6.0000, max_parallel=8.0000 -> OK",
+          "interval 0: sumx=5.0000 GPU, IT=10.2500 kW, grid=12.8125 kW, energy=6.4062 kWh, rate=0.1881, cost=1.2053",
+          "interval 1: sumx=5.0000 GPU, IT=10.2500 kW, grid=12.8125 kW, energy=6.4062 kWh, rate=0.1881, cost=1.2053",
+          "interval 2: sumx=11.0000 GPU, IT=12.9500 kW, grid=16.1875 kW, energy=8.0938 kWh, rate=0.1689, cost=1.3668",
+          "interval 3: sumx=9.0000 GPU, IT=12.0500 kW, grid=15.0625 kW, energy=7.5312 kWh, rate=0.1597, cost=1.2028",
+          "interval 4: sumx=14.0000 GPU, IT=14.3000 kW, grid=17.8750 kW, energy=8.9375 kWh, rate=0.1705, cost=1.5242",
+          "interval 5: sumx=14.0000 GPU, IT=14.3000 kW, grid=17.8750 kW, energy=8.9375 kWh, rate=0.1767, cost=1.5796",
+          "interval 6: sumx=11.0000 GPU, IT=12.9500 kW, grid=16.1875 kW, energy=8.0938 kWh, rate=0.1936, cost=1.5669",
+          "interval 7: sumx=6.0000 GPU, IT=10.7000 kW, grid=13.3750 kW, energy=6.6875 kWh, rate=0.1797, cost=1.2018",
+          "interval 8: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2426, cost=1.2128",
+          "interval 9: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2014, cost=1.0069",
+          "interval 10: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2304, cost=1.1522",
+          "interval 11: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2776, cost=1.3880",
+          "interval 12: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3104, cost=1.5522",
+          "interval 13: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3325, cost=1.6623",
+          "interval 14: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.4370, cost=2.1850",
+          "interval 15: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3600, cost=1.8001",
+          "interval 16: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3085, cost=1.5423",
+          "interval 17: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3739, cost=1.8693",
+          "interval 18: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2928, cost=1.4638",
+          "interval 19: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2451, cost=1.2255",
+          "interval 20: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3158, cost=1.5791",
+          "interval 21: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2850, cost=1.4251",
+          "interval 22: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2850, cost=1.4251",
+          "interval 23: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3525, cost=1.7627",
+          "interval 24: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2586, cost=1.2930",
+          "interval 25: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 26: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 27: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 28: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2273, cost=1.1364",
+          "interval 29: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 30: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2451, cost=1.2255"
+        ],
+        "summary": {
+          "total_gpu_hours": 37.5,
+          "total_grid_energy_kwh": 176.09375,
+          "total_cost_currency": 43.320380809875,
+          "budget_headroom_currency": null
+        },
+        "per_job": {
+          "batch-a": {
+            "done_gpu_hours": 9.0,
+            "required_gpu_hours": 9.0,
+            "window_hours": 4.0
+          },
+          "batch-b": {
+            "done_gpu_hours": 13.5,
+            "required_gpu_hours": 13.5,
+            "window_hours": 5.0
+          },
+          "nightly": {
+            "done_gpu_hours": 15.0,
+            "required_gpu_hours": 15.0,
+            "window_hours": 6.0
+          }
+        },
+        "schedule": [
+          {
+            "interval_index": 0,
+            "start_iso": "2026-11-15T12:30:00+10:00",
+            "end_iso": "2026-11-15T13:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 5.0,
+            "it_power_kw": 10.25,
+            "grid_power_kw": 12.8125,
+            "grid_energy_kwh": 6.40625,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 1.2052590625
+          },
+          {
+            "interval_index": 1,
+            "start_iso": "2026-11-15T13:00:00+10:00",
+            "end_iso": "2026-11-15T13:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 5.0,
+            "it_power_kw": 10.25,
+            "grid_power_kw": 12.8125,
+            "grid_energy_kwh": 6.40625,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 1.2052590625
+          },
+          {
+            "interval_index": 2,
+            "start_iso": "2026-11-15T13:30:00+10:00",
+            "end_iso": "2026-11-15T14:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.168872057,
+            "cost_currency": 1.366808211344
+          },
+          {
+            "interval_index": 3,
+            "start_iso": "2026-11-15T14:00:00+10:00",
+            "end_iso": "2026-11-15T14:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 9.0,
+            "it_power_kw": 12.05,
+            "grid_power_kw": 15.0625,
+            "grid_energy_kwh": 7.53125,
+            "price_currency_per_kwh": 0.15970774899999998,
+            "cost_currency": 1.202798984656
+          },
+          {
+            "interval_index": 4,
+            "start_iso": "2026-11-15T14:30:00+10:00",
+            "end_iso": "2026-11-15T15:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 14.0,
+            "it_power_kw": 14.3,
+            "grid_power_kw": 17.875,
+            "grid_energy_kwh": 8.9375,
+            "price_currency_per_kwh": 0.170540694,
+            "cost_currency": 1.524207452625
+          },
+          {
+            "interval_index": 5,
+            "start_iso": "2026-11-15T15:00:00+10:00",
+            "end_iso": "2026-11-15T15:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 14.0,
+            "it_power_kw": 14.3,
+            "grid_power_kw": 17.875,
+            "grid_energy_kwh": 8.9375,
+            "price_currency_per_kwh": 0.17673799999999998,
+            "cost_currency": 1.579595875
+          },
+          {
+            "interval_index": 6,
+            "start_iso": "2026-11-15T15:30:00+10:00",
+            "end_iso": "2026-11-15T16:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.19359099999999999,
+            "cost_currency": 1.56687715625
+          },
+          {
+            "interval_index": 7,
+            "start_iso": "2026-11-15T16:00:00+10:00",
+            "end_iso": "2026-11-15T16:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 6.0,
+            "it_power_kw": 10.7,
+            "grid_power_kw": 13.375,
+            "grid_energy_kwh": 6.6875,
+            "price_currency_per_kwh": 0.17970199999999997,
+            "cost_currency": 1.201757125
+          },
+          {
+            "interval_index": 8,
+            "start_iso": "2026-11-15T16:30:00+10:00",
+            "end_iso": "2026-11-15T17:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24256241699999997,
+            "cost_currency": 1.212812085
+          },
+          {
+            "interval_index": 9,
+            "start_iso": "2026-11-15T17:00:00+10:00",
+            "end_iso": "2026-11-15T17:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.201381,
+            "cost_currency": 1.006905
+          },
+          {
+            "interval_index": 10,
+            "start_iso": "2026-11-15T17:30:00+10:00",
+            "end_iso": "2026-11-15T18:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.23044949899999997,
+            "cost_currency": 1.152247495
+          },
+          {
+            "interval_index": 11,
+            "start_iso": "2026-11-15T18:00:00+10:00",
+            "end_iso": "2026-11-15T18:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.277609,
+            "cost_currency": 1.388045
+          },
+          {
+            "interval_index": 12,
+            "start_iso": "2026-11-15T18:30:00+10:00",
+            "end_iso": "2026-11-15T19:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.310431899,
+            "cost_currency": 1.552159495
+          },
+          {
+            "interval_index": 13,
+            "start_iso": "2026-11-15T19:00:00+10:00",
+            "end_iso": "2026-11-15T19:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.332452937,
+            "cost_currency": 1.662264685
+          },
+          {
+            "interval_index": 14,
+            "start_iso": "2026-11-15T19:30:00+10:00",
+            "end_iso": "2026-11-15T20:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.437,
+            "cost_currency": 2.185
+          },
+          {
+            "interval_index": 15,
+            "start_iso": "2026-11-15T20:00:00+10:00",
+            "end_iso": "2026-11-15T20:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.360028967,
+            "cost_currency": 1.800144835
+          },
+          {
+            "interval_index": 16,
+            "start_iso": "2026-11-15T20:30:00+10:00",
+            "end_iso": "2026-11-15T21:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.308467717,
+            "cost_currency": 1.542338585
+          },
+          {
+            "interval_index": 17,
+            "start_iso": "2026-11-15T21:00:00+10:00",
+            "end_iso": "2026-11-15T21:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.37385045999999994,
+            "cost_currency": 1.8692523
+          },
+          {
+            "interval_index": 18,
+            "start_iso": "2026-11-15T21:30:00+10:00",
+            "end_iso": "2026-11-15T22:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.29276455900000004,
+            "cost_currency": 1.463822795
+          },
+          {
+            "interval_index": 19,
+            "start_iso": "2026-11-15T22:00:00+10:00",
+            "end_iso": "2026-11-15T22:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          },
+          {
+            "interval_index": 20,
+            "start_iso": "2026-11-15T22:30:00+10:00",
+            "end_iso": "2026-11-15T23:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.3158285069999999,
+            "cost_currency": 1.579142535
+          },
+          {
+            "interval_index": 21,
+            "start_iso": "2026-11-15T23:00:00+10:00",
+            "end_iso": "2026-11-15T23:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 22,
+            "start_iso": "2026-11-15T23:30:00+10:00",
+            "end_iso": "2026-11-16T00:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 23,
+            "start_iso": "2026-11-16T00:00:00+10:00",
+            "end_iso": "2026-11-16T00:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.352540174,
+            "cost_currency": 1.76270087
+          },
+          {
+            "interval_index": 24,
+            "start_iso": "2026-11-16T00:30:00+10:00",
+            "end_iso": "2026-11-16T01:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.25859587100000003,
+            "cost_currency": 1.292979355
+          },
+          {
+            "interval_index": 25,
+            "start_iso": "2026-11-16T01:00:00+10:00",
+            "end_iso": "2026-11-16T01:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 26,
+            "start_iso": "2026-11-16T01:30:00+10:00",
+            "end_iso": "2026-11-16T02:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 27,
+            "start_iso": "2026-11-16T02:00:00+10:00",
+            "end_iso": "2026-11-16T02:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 28,
+            "start_iso": "2026-11-16T02:30:00+10:00",
+            "end_iso": "2026-11-16T03:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.227286569,
+            "cost_currency": 1.136432845
+          },
+          {
+            "interval_index": 29,
+            "start_iso": "2026-11-16T03:00:00+10:00",
+            "end_iso": "2026-11-16T03:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 30,
+            "start_iso": "2026-11-16T03:30:00+10:00",
+            "end_iso": "2026-11-16T04:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          }
+        ]
+      },
+      "forecast_cost": 43.320380809875,
+      "actual_cost": null
+    },
+    {
+      "name": "Minimum forecast cost",
+      "plan": {
+        "schema_version": "1.0",
+        "label": "Declared computing-workload study",
+        "mode": "optimizer",
+        "status": "feasible",
+        "infeasibility_reasons": [],
+        "schedule": [
+          {
+            "interval_index": 0,
+            "start_iso": "2026-11-15T12:30:00+10:00",
+            "end_iso": "2026-11-15T13:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 0.94069
+          },
+          {
+            "interval_index": 1,
+            "start_iso": "2026-11-15T13:00:00+10:00",
+            "end_iso": "2026-11-15T13:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 0.94069
+          },
+          {
+            "interval_index": 2,
+            "start_iso": "2026-11-15T13:30:00+10:00",
+            "end_iso": "2026-11-15T14:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 5.0,
+              "batch-b": 6.0
+            },
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.168872057,
+            "cost_currency": 1.366808211344
+          },
+          {
+            "interval_index": 3,
+            "start_iso": "2026-11-15T14:00:00+10:00",
+            "end_iso": "2026-11-15T14:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 5.0,
+              "batch-b": 6.0
+            },
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.15970774899999998,
+            "cost_currency": 1.292634593469
+          },
+          {
+            "interval_index": 4,
+            "start_iso": "2026-11-15T14:30:00+10:00",
+            "end_iso": "2026-11-15T15:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 5.0,
+              "batch-b": 6.0,
+              "nightly": 8.0
+            },
+            "total_allocation_gpu": 19.0,
+            "it_power_kw": 16.55,
+            "grid_power_kw": 20.6875,
+            "grid_energy_kwh": 10.34375,
+            "price_currency_per_kwh": 0.170540694,
+            "cost_currency": 1.764030303563
+          },
+          {
+            "interval_index": 5,
+            "start_iso": "2026-11-15T15:00:00+10:00",
+            "end_iso": "2026-11-15T15:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 3.0,
+              "batch-b": 6.0,
+              "nightly": 8.0
+            },
+            "total_allocation_gpu": 17.0,
+            "it_power_kw": 15.65,
+            "grid_power_kw": 19.5625,
+            "grid_energy_kwh": 9.78125,
+            "price_currency_per_kwh": 0.17673799999999998,
+            "cost_currency": 1.7287185625
+          },
+          {
+            "interval_index": 6,
+            "start_iso": "2026-11-15T15:30:00+10:00",
+            "end_iso": "2026-11-15T16:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 0.0,
+              "batch-b": 0.0,
+              "nightly": 6.0
+            },
+            "total_allocation_gpu": 6.0,
+            "it_power_kw": 10.7,
+            "grid_power_kw": 13.375,
+            "grid_energy_kwh": 6.6875,
+            "price_currency_per_kwh": 0.19359099999999999,
+            "cost_currency": 1.2946398125
+          },
+          {
+            "interval_index": 7,
+            "start_iso": "2026-11-15T16:00:00+10:00",
+            "end_iso": "2026-11-15T16:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-a": 0.0,
+              "batch-b": 3.0,
+              "nightly": 8.0
+            },
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.17970199999999997,
+            "cost_currency": 1.4544630625
+          },
+          {
+            "interval_index": 8,
+            "start_iso": "2026-11-15T16:30:00+10:00",
+            "end_iso": "2026-11-15T17:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-b": 0.0,
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24256241699999997,
+            "cost_currency": 1.212812085
+          },
+          {
+            "interval_index": 9,
+            "start_iso": "2026-11-15T17:00:00+10:00",
+            "end_iso": "2026-11-15T17:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-b": 0.0,
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.201381,
+            "cost_currency": 1.006905
+          },
+          {
+            "interval_index": 10,
+            "start_iso": "2026-11-15T17:30:00+10:00",
+            "end_iso": "2026-11-15T18:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-b": 0.0,
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.23044949899999997,
+            "cost_currency": 1.152247495
+          },
+          {
+            "interval_index": 11,
+            "start_iso": "2026-11-15T18:00:00+10:00",
+            "end_iso": "2026-11-15T18:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "batch-b": 0.0,
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.277609,
+            "cost_currency": 1.388045
+          },
+          {
+            "interval_index": 12,
+            "start_iso": "2026-11-15T18:30:00+10:00",
+            "end_iso": "2026-11-15T19:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.310431899,
+            "cost_currency": 1.552159495
+          },
+          {
+            "interval_index": 13,
+            "start_iso": "2026-11-15T19:00:00+10:00",
+            "end_iso": "2026-11-15T19:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.332452937,
+            "cost_currency": 1.662264685
+          },
+          {
+            "interval_index": 14,
+            "start_iso": "2026-11-15T19:30:00+10:00",
+            "end_iso": "2026-11-15T20:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.437,
+            "cost_currency": 2.185
+          },
+          {
+            "interval_index": 15,
+            "start_iso": "2026-11-15T20:00:00+10:00",
+            "end_iso": "2026-11-15T20:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {
+              "nightly": 0.0
+            },
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.360028967,
+            "cost_currency": 1.800144835
+          },
+          {
+            "interval_index": 16,
+            "start_iso": "2026-11-15T20:30:00+10:00",
+            "end_iso": "2026-11-15T21:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.308467717,
+            "cost_currency": 1.542338585
+          },
+          {
+            "interval_index": 17,
+            "start_iso": "2026-11-15T21:00:00+10:00",
+            "end_iso": "2026-11-15T21:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.37385045999999994,
+            "cost_currency": 1.8692523
+          },
+          {
+            "interval_index": 18,
+            "start_iso": "2026-11-15T21:30:00+10:00",
+            "end_iso": "2026-11-15T22:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.29276455900000004,
+            "cost_currency": 1.463822795
+          },
+          {
+            "interval_index": 19,
+            "start_iso": "2026-11-15T22:00:00+10:00",
+            "end_iso": "2026-11-15T22:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          },
+          {
+            "interval_index": 20,
+            "start_iso": "2026-11-15T22:30:00+10:00",
+            "end_iso": "2026-11-15T23:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.3158285069999999,
+            "cost_currency": 1.579142535
+          },
+          {
+            "interval_index": 21,
+            "start_iso": "2026-11-15T23:00:00+10:00",
+            "end_iso": "2026-11-15T23:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 22,
+            "start_iso": "2026-11-15T23:30:00+10:00",
+            "end_iso": "2026-11-16T00:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 23,
+            "start_iso": "2026-11-16T00:00:00+10:00",
+            "end_iso": "2026-11-16T00:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.352540174,
+            "cost_currency": 1.76270087
+          },
+          {
+            "interval_index": 24,
+            "start_iso": "2026-11-16T00:30:00+10:00",
+            "end_iso": "2026-11-16T01:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.25859587100000003,
+            "cost_currency": 1.292979355
+          },
+          {
+            "interval_index": 25,
+            "start_iso": "2026-11-16T01:00:00+10:00",
+            "end_iso": "2026-11-16T01:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 26,
+            "start_iso": "2026-11-16T01:30:00+10:00",
+            "end_iso": "2026-11-16T02:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 27,
+            "start_iso": "2026-11-16T02:00:00+10:00",
+            "end_iso": "2026-11-16T02:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 28,
+            "start_iso": "2026-11-16T02:30:00+10:00",
+            "end_iso": "2026-11-16T03:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.227286569,
+            "cost_currency": 1.136432845
+          },
+          {
+            "interval_index": 29,
+            "start_iso": "2026-11-16T03:00:00+10:00",
+            "end_iso": "2026-11-16T03:30:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 30,
+            "start_iso": "2026-11-16T03:30:00+10:00",
+            "end_iso": "2026-11-16T04:00:00+10:00",
+            "interval_hours": 0.5,
+            "allocations_gpu": {},
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          }
+        ],
+        "summary": {
+          "total_gpu_hours": 37.5,
+          "total_grid_energy_kwh": 176.09375,
+          "total_cost_currency": 43.250492425875,
+          "currency": "AUD",
+          "budget_headroom_currency": null
+        },
+        "meta": {
+          "tool": "ai_compute optimizer v1.0",
+          "solver": "pulp-CBC",
+          "model": "preemptible/divisible LP, x[j,t] avg active-GPU equivalents",
+          "label_synthetic": true
+        }
+      },
+      "check": {
+        "verdict": "PASS",
+        "status_under_test": "feasible",
+        "currency": "AUD",
+        "issues": [],
+        "checks": [
+          "job batch-a: required=9.0000 GPU-h, done=9.000000, window_hours=4.0000, max_parallel=5.0000 -> OK",
+          "job batch-b: required=13.5000 GPU-h, done=13.500000, window_hours=5.0000, max_parallel=6.0000 -> OK",
+          "job nightly: required=15.0000 GPU-h, done=15.000000, window_hours=6.0000, max_parallel=8.0000 -> OK",
+          "interval 0: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.1881, cost=0.9407",
+          "interval 1: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.1881, cost=0.9407",
+          "interval 2: sumx=11.0000 GPU, IT=12.9500 kW, grid=16.1875 kW, energy=8.0938 kWh, rate=0.1689, cost=1.3668",
+          "interval 3: sumx=11.0000 GPU, IT=12.9500 kW, grid=16.1875 kW, energy=8.0938 kWh, rate=0.1597, cost=1.2926",
+          "interval 4: sumx=19.0000 GPU, IT=16.5500 kW, grid=20.6875 kW, energy=10.3438 kWh, rate=0.1705, cost=1.7640",
+          "interval 5: sumx=17.0000 GPU, IT=15.6500 kW, grid=19.5625 kW, energy=9.7812 kWh, rate=0.1767, cost=1.7287",
+          "interval 6: sumx=6.0000 GPU, IT=10.7000 kW, grid=13.3750 kW, energy=6.6875 kWh, rate=0.1936, cost=1.2946",
+          "interval 7: sumx=11.0000 GPU, IT=12.9500 kW, grid=16.1875 kW, energy=8.0938 kWh, rate=0.1797, cost=1.4545",
+          "interval 8: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2426, cost=1.2128",
+          "interval 9: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2014, cost=1.0069",
+          "interval 10: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2304, cost=1.1522",
+          "interval 11: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2776, cost=1.3880",
+          "interval 12: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3104, cost=1.5522",
+          "interval 13: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3325, cost=1.6623",
+          "interval 14: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.4370, cost=2.1850",
+          "interval 15: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3600, cost=1.8001",
+          "interval 16: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3085, cost=1.5423",
+          "interval 17: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3739, cost=1.8693",
+          "interval 18: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2928, cost=1.4638",
+          "interval 19: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2451, cost=1.2255",
+          "interval 20: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3158, cost=1.5791",
+          "interval 21: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2850, cost=1.4251",
+          "interval 22: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2850, cost=1.4251",
+          "interval 23: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.3525, cost=1.7627",
+          "interval 24: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2586, cost=1.2930",
+          "interval 25: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 26: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 27: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 28: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2273, cost=1.1364",
+          "interval 29: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2280, cost=1.1401",
+          "interval 30: sumx=0.0000 GPU, IT=8.0000 kW, grid=10.0000 kW, energy=5.0000 kWh, rate=0.2451, cost=1.2255"
+        ],
+        "summary": {
+          "total_gpu_hours": 37.5,
+          "total_grid_energy_kwh": 176.09375,
+          "total_cost_currency": 43.250492425875,
+          "budget_headroom_currency": null
+        },
+        "per_job": {
+          "batch-a": {
+            "done_gpu_hours": 9.0,
+            "required_gpu_hours": 9.0,
+            "window_hours": 4.0
+          },
+          "batch-b": {
+            "done_gpu_hours": 13.5,
+            "required_gpu_hours": 13.5,
+            "window_hours": 5.0
+          },
+          "nightly": {
+            "done_gpu_hours": 15.0,
+            "required_gpu_hours": 15.0,
+            "window_hours": 6.0
+          }
+        },
+        "schedule": [
+          {
+            "interval_index": 0,
+            "start_iso": "2026-11-15T12:30:00+10:00",
+            "end_iso": "2026-11-15T13:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 0.94069
+          },
+          {
+            "interval_index": 1,
+            "start_iso": "2026-11-15T13:00:00+10:00",
+            "end_iso": "2026-11-15T13:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.18813799999999997,
+            "cost_currency": 0.94069
+          },
+          {
+            "interval_index": 2,
+            "start_iso": "2026-11-15T13:30:00+10:00",
+            "end_iso": "2026-11-15T14:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.168872057,
+            "cost_currency": 1.366808211344
+          },
+          {
+            "interval_index": 3,
+            "start_iso": "2026-11-15T14:00:00+10:00",
+            "end_iso": "2026-11-15T14:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.15970774899999998,
+            "cost_currency": 1.292634593469
+          },
+          {
+            "interval_index": 4,
+            "start_iso": "2026-11-15T14:30:00+10:00",
+            "end_iso": "2026-11-15T15:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 19.0,
+            "it_power_kw": 16.55,
+            "grid_power_kw": 20.6875,
+            "grid_energy_kwh": 10.34375,
+            "price_currency_per_kwh": 0.170540694,
+            "cost_currency": 1.764030303563
+          },
+          {
+            "interval_index": 5,
+            "start_iso": "2026-11-15T15:00:00+10:00",
+            "end_iso": "2026-11-15T15:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 17.0,
+            "it_power_kw": 15.65,
+            "grid_power_kw": 19.5625,
+            "grid_energy_kwh": 9.78125,
+            "price_currency_per_kwh": 0.17673799999999998,
+            "cost_currency": 1.7287185625
+          },
+          {
+            "interval_index": 6,
+            "start_iso": "2026-11-15T15:30:00+10:00",
+            "end_iso": "2026-11-15T16:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 6.0,
+            "it_power_kw": 10.7,
+            "grid_power_kw": 13.375,
+            "grid_energy_kwh": 6.6875,
+            "price_currency_per_kwh": 0.19359099999999999,
+            "cost_currency": 1.2946398125
+          },
+          {
+            "interval_index": 7,
+            "start_iso": "2026-11-15T16:00:00+10:00",
+            "end_iso": "2026-11-15T16:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 11.0,
+            "it_power_kw": 12.95,
+            "grid_power_kw": 16.1875,
+            "grid_energy_kwh": 8.09375,
+            "price_currency_per_kwh": 0.17970199999999997,
+            "cost_currency": 1.4544630625
+          },
+          {
+            "interval_index": 8,
+            "start_iso": "2026-11-15T16:30:00+10:00",
+            "end_iso": "2026-11-15T17:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24256241699999997,
+            "cost_currency": 1.212812085
+          },
+          {
+            "interval_index": 9,
+            "start_iso": "2026-11-15T17:00:00+10:00",
+            "end_iso": "2026-11-15T17:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.201381,
+            "cost_currency": 1.006905
+          },
+          {
+            "interval_index": 10,
+            "start_iso": "2026-11-15T17:30:00+10:00",
+            "end_iso": "2026-11-15T18:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.23044949899999997,
+            "cost_currency": 1.152247495
+          },
+          {
+            "interval_index": 11,
+            "start_iso": "2026-11-15T18:00:00+10:00",
+            "end_iso": "2026-11-15T18:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.277609,
+            "cost_currency": 1.388045
+          },
+          {
+            "interval_index": 12,
+            "start_iso": "2026-11-15T18:30:00+10:00",
+            "end_iso": "2026-11-15T19:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.310431899,
+            "cost_currency": 1.552159495
+          },
+          {
+            "interval_index": 13,
+            "start_iso": "2026-11-15T19:00:00+10:00",
+            "end_iso": "2026-11-15T19:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.332452937,
+            "cost_currency": 1.662264685
+          },
+          {
+            "interval_index": 14,
+            "start_iso": "2026-11-15T19:30:00+10:00",
+            "end_iso": "2026-11-15T20:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.437,
+            "cost_currency": 2.185
+          },
+          {
+            "interval_index": 15,
+            "start_iso": "2026-11-15T20:00:00+10:00",
+            "end_iso": "2026-11-15T20:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0.0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.360028967,
+            "cost_currency": 1.800144835
+          },
+          {
+            "interval_index": 16,
+            "start_iso": "2026-11-15T20:30:00+10:00",
+            "end_iso": "2026-11-15T21:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.308467717,
+            "cost_currency": 1.542338585
+          },
+          {
+            "interval_index": 17,
+            "start_iso": "2026-11-15T21:00:00+10:00",
+            "end_iso": "2026-11-15T21:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.37385045999999994,
+            "cost_currency": 1.8692523
+          },
+          {
+            "interval_index": 18,
+            "start_iso": "2026-11-15T21:30:00+10:00",
+            "end_iso": "2026-11-15T22:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.29276455900000004,
+            "cost_currency": 1.463822795
+          },
+          {
+            "interval_index": 19,
+            "start_iso": "2026-11-15T22:00:00+10:00",
+            "end_iso": "2026-11-15T22:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          },
+          {
+            "interval_index": 20,
+            "start_iso": "2026-11-15T22:30:00+10:00",
+            "end_iso": "2026-11-15T23:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.3158285069999999,
+            "cost_currency": 1.579142535
+          },
+          {
+            "interval_index": 21,
+            "start_iso": "2026-11-15T23:00:00+10:00",
+            "end_iso": "2026-11-15T23:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 22,
+            "start_iso": "2026-11-15T23:30:00+10:00",
+            "end_iso": "2026-11-16T00:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.285019,
+            "cost_currency": 1.425095
+          },
+          {
+            "interval_index": 23,
+            "start_iso": "2026-11-16T00:00:00+10:00",
+            "end_iso": "2026-11-16T00:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.352540174,
+            "cost_currency": 1.76270087
+          },
+          {
+            "interval_index": 24,
+            "start_iso": "2026-11-16T00:30:00+10:00",
+            "end_iso": "2026-11-16T01:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.25859587100000003,
+            "cost_currency": 1.292979355
+          },
+          {
+            "interval_index": 25,
+            "start_iso": "2026-11-16T01:00:00+10:00",
+            "end_iso": "2026-11-16T01:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 26,
+            "start_iso": "2026-11-16T01:30:00+10:00",
+            "end_iso": "2026-11-16T02:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 27,
+            "start_iso": "2026-11-16T02:00:00+10:00",
+            "end_iso": "2026-11-16T02:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 28,
+            "start_iso": "2026-11-16T02:30:00+10:00",
+            "end_iso": "2026-11-16T03:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.227286569,
+            "cost_currency": 1.136432845
+          },
+          {
+            "interval_index": 29,
+            "start_iso": "2026-11-16T03:00:00+10:00",
+            "end_iso": "2026-11-16T03:30:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.228019,
+            "cost_currency": 1.140095
+          },
+          {
+            "interval_index": 30,
+            "start_iso": "2026-11-16T03:30:00+10:00",
+            "end_iso": "2026-11-16T04:00:00+10:00",
+            "interval_hours": 0.5,
+            "total_allocation_gpu": 0,
+            "it_power_kw": 8.0,
+            "grid_power_kw": 10.0,
+            "grid_energy_kwh": 5.0,
+            "price_currency_per_kwh": 0.24509999999999998,
+            "cost_currency": 1.2255
+          }
+        ]
+      },
+      "forecast_cost": 43.250492425875,
+      "actual_cost": null
+    }
+  ],
+  "predicted_saving": 0.06988838399999509,
+  "actual_saving": null,
+  "limitations": "Synthetic workload and tariffs. This is a planning experiment, not an actual bill or a validated fuel-shock sensitivity. Rolling exports may include an already-started nominal interval and are experimental. No model retraining, external market download or LLM request occurs here.",
+  "hedge": {
+    "strike_aud_mwh": 100.0,
+    "coverage": 0.5,
+    "hedged_kw": 5.0,
+    "hedged_mwh": 0.0775,
+    "scenarios": [
+      {
+        "scenario": "Forecast",
+        "start_early_aud": 43.320380809875,
+        "schedule_aud": 43.250492425875,
+        "hedge_payoff_aud": 2.6697251,
+        "schedule_and_hedge_aud": 40.580767325875
+      },
+      {
+        "scenario": "Prices fall by A$50/MWh",
+        "start_early_aud": 26.591474559875,
+        "schedule_aud": 26.521586175875,
+        "hedge_payoff_aud": -1.2052749,
+        "schedule_and_hedge_aud": 27.726861075875
+      },
+      {
+        "scenario": "Prices rise by A$50/MWh",
+        "start_early_aud": 60.049287059875,
+        "schedule_aud": 59.979398675875,
+        "hedge_payoff_aud": 6.5447251,
+        "schedule_and_hedge_aud": 53.434673575874996
+      },
+      {
+        "scenario": "16:00\u201320:00 NEM spike (+A$300/MWh)",
+        "start_early_aud": 67.082255809875,
+        "schedule_aud": 67.813929925875,
+        "hedge_payoff_aud": 8.6697251,
+        "schedule_and_hedge_aud": 59.144204825875
+      }
+    ],
+    "note": "Hypothetical contract for difference on NSW1 wholesale prices over the planning horizon. A fixed volume settles in each half-hour against the assumed strike. The retail tariff has a multiplier and floor, so some exposure remains. Stress cases have no assigned probabilities. Fees and margin are excluded."
+  },
+  "output_file": "Data/outputs/live_market/schedule_20261115T020514821635.json"
+}

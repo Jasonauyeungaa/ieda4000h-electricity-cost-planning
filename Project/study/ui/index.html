@@ -1,92 +1,223 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Computing Electricity Cost · Electricity Cost Planning</title>
-<link rel="stylesheet" href="/app.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electricity Cost Planning · IEDA 4000H</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23237568'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/app.css">
+  <script defer src="/chart.js"></script>
+  <script defer src="/app.js"></script>
 </head>
 <body>
-<header>
-  <div><p class="eyebrow">ELECTRICITY COST PLANNING</p>
-  <h1>When should we run AI jobs?</h1>
-  <p>Compare electricity costs for a small AI company that needs to finish every job on time.</p></div>
+<header class="topbar">
+  <div class="shell masthead">
+    <a class="brand" href="/">IEDA <strong>4000H</strong></a>
+    <span>HKUST · Optimization in Financial Engineering</span>
+    <span class="market-label"><i></i> NSW1 historical archive</span>
+  </div>
 </header>
-<nav aria-label="Demo sections"><a href="#inputs">Run demo</a><a href="#results">Results</a><a href="#evidence">Study evidence</a><a href="/slides/Presentation.html" hidden>Slides</a></nav>
-<main>
-<section id="inputs">
-  <h2>Choose a forecast and tariff</h2>
-  <p>For the demo, use 11 March 2026 and 25 GPU-hours. Start with the wholesale-linked tariff, then try the flat tariff.</p>
-  <form id="run">
-    <div class="controls">
-      <label>Price forecast<select id="files"></select></label>
-      <label>Workload<select id="scenario"><option value="standard">25 GPU-hours</option><option value="more-work">37.5 GPU-hours</option><option value="earlier">Earlier deadlines</option></select></label>
-      <label>Tariff<select id="tariff"><option value="linked">Wholesale-linked</option><option value="flat">Flat · AUD 0.30/kWh</option></select></label>
-      <button id="solve" class="primary" disabled>Optimize and verify</button>
+<main class="shell">
+  <section class="intro">
+    <div>
+      <h1>Electricity Cost Planning<br> for AI Computing</h1>
+      <p>Forecast wholesale prices, then see when to run flexible GPU jobs and what the schedule would cost.</p>
     </div>
-    <details class="demo-details">
-      <summary>Compare a wholesale price hedge</summary>
-      <div class="controls">
-        <label class="hedge-toggle"><input type="checkbox" id="hedgeEnabled"> Include simulated hedge</label>
-        <label>Strike · AUD/MWh<input type="number" id="hedgeStrike" value="100" step="any" disabled required></label>
-        <label>Base load covered · %<input type="number" id="hedgeCoverage" value="50" min="1" max="100" step="any" disabled required></label>
+    <dl class="archive-info" aria-label="Archive coverage">
+      <div><dt>Market</dt><dd>New South Wales <small>NSW1</small></dd></div>
+      <div><dt>Archive</dt><dd id="archiveRange">Loading coverage…</dd></div>
+      <div><dt>Market time</dt><dd>UTC+10</dd></div>
+    </dl>
+  </section>
+
+  <form id="runForm" class="run-form">
+    <div class="control-grid">
+      <label>Forecast day<input id="day" type="date" value="2026-10-22" min="2025-01-01" required></label>
+      <label>Price model<select id="model"><option value="lstm">LSTM</option><option value="cnn">1D CNN</option><option value="fnn">FNN</option><option value="prev-day">Previous day</option><option value="prev-week">Previous week</option><option value="auto">Best validation MAE</option></select></label>
+      <label>GPU workload<select id="scenario"><option value="standard">25 GPU-hours</option><option value="more-work">37.5 GPU-hours</option><option value="earlier">Earlier deadlines</option></select></label>
+      <label>Retail tariff<select id="tariff"><option value="linked">Wholesale-linked</option><option value="flat">Flat · A$0.30/kWh</option></select></label>
+      <button class="primary" id="runButton" type="submit" disabled>Run model <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="options">
+      <div class="presets"><button type="button" data-preset="2026-10-22">22 Oct demo</button><button type="button" data-preset="2026-09-17">17 Sep demo</button></div>
+      <details id="hedgeOptions">
+        <summary>Hedge terms</summary>
+        <div class="hedge-controls">
+          <label class="checkbox"><input type="checkbox" id="includeHedge" checked> Simulate CfD</label>
+          <label>Strike (A$/MWh)<input id="strike" type="number" value="100" step="any" required></label>
+          <label>Base load covered (%)<input id="coverage" type="number" value="50" min="0.01" max="100" step="any" required></label>
+        </div>
+      </details>
+      <details id="savedOptions">
+        <summary>Saved forecast</summary>
+        <div class="saved-controls">
+          <label>Forecast export<select id="savedForecast"></select></label>
+          <label>Import JSON<input id="upload" type="file" accept=".json,application/json"></label>
+          <button type="button" id="runSaved" disabled>Run saved forecast</button>
+        </div>
+        <p id="savedStatus" class="small" role="status"></p>
+      </details>
+    </div>
+    <p class="status" role="status" id="status">Loading recorded demo…</p>
+    <div class="job-panel" id="jobMeter" hidden>
+      <div class="job-fields">
+        <div><span>STATUS</span><strong id="jobState">queued</strong></div>
+        <div><span>STAGE</span><strong id="jobStage">—</strong></div>
+        <div><span>ELAPSED</span><strong id="jobElapsed">0.0s</strong></div>
+        <div><span>EXIT CODE</span><strong id="jobExit">—</strong></div>
       </div>
-      <p class="small">Assumed contract terms. Available with the wholesale-linked tariff.</p>
-    </details>
+      <p class="job-path" id="jobPath"></p>
+      <pre class="stage-log" id="stageLog" aria-live="polite"></pre>
+    </div>
+    <div class="repro-line" id="reproLine" hidden>
+      <strong id="reproVerdict">—</strong>
+      <button type="button" id="reproLink" class="linklike">See the full table</button>
+    </div>
   </form>
-  <p id="status" class="notice" role="status">Looking for saved forecasts…</p>
-  <details class="demo-details"><summary>See the forecast and observed prices</summary>
-    <p id="provenance" class="small"></p><div class="chart"><canvas id="priceChart"></canvas></div><div id="sample"></div>
-  </details>
-  <details class="demo-details"><summary>Generate or import another forecast</summary>
-    <div class="controls">
-      <label>Import F forecast JSON<input type="file" id="upload" accept="application/json,.json"></label>
-      <button type="button" id="scan">Scan Data folder</button>
+
+  <div class="summary-strip" aria-label="Current run summary">
+    <div><span>LP electricity budget</span><strong id="budget">—</strong><small>Forecast prices</small></div>
+    <div><span>LP cost in replay</span><strong id="replayCost">—</strong><small>Observed wholesale prices</small></div>
+    <div><span>Difference from start early</span><strong id="difference">—</strong><small id="differenceDetail">Observed-price replay</small></div>
+    <div><span>Independent checks</span><strong id="verify">—</strong><small id="verifyDetail">Start early and LP schedules</small></div>
+  </div>
+
+  <nav aria-label="Workbench views" class="views">
+    <button type="button" data-view="forecast" aria-pressed="true" aria-controls="forecast">1 · Run</button>
+    <button type="button" data-view="data" aria-pressed="false" aria-controls="data">2 · Raw data</button>
+    <button type="button" data-view="schedule" aria-pressed="false" aria-controls="schedule">3 · Results</button>
+    <button type="button" data-view="compare" aria-pressed="false" aria-controls="compare">4 · Compare</button>
+    <button type="button" data-view="live" aria-pressed="false" aria-controls="live">Live AEMO</button>
+    <button type="button" data-view="results" aria-pressed="false" aria-controls="results">Recorded examples</button>
+    <button type="button" data-view="replay" aria-pressed="false" aria-controls="replay">Offline replay</button>
+  </nav>
+
+  <section id="results" class="view" hidden>
+    <div class="section-head">
+      <div><h2>Both demo cases</h2><p>Read from the frozen fixtures by folder and glob. The favourable case and the adverse case always appear together.</p></div>
+      <button type="button" id="reloadFixtures">Reload fixtures</button>
     </div>
-    <div id="fileErrors"></div>
-    <form id="forecastRun">
-      <div class="controls">
-        <label>Forecast day · NEM time<input id="forecastDay" type="date" min="2025-01-01" value="2026-03-11" required></label>
-        <label>Price model<select id="forecastModel"><option value="auto">Best on validation</option><option value="lstm">LSTM</option><option value="cnn">CNN</option><option value="fnn">FNN</option><option value="prev-day">Previous day</option><option value="prev-week">Previous week</option></select></label>
-        <button id="generateForecast" class="primary">Run price and demand forecasts</button>
-      </div>
-      <p id="forecastStatus" class="notice" role="status">Uses the bundled forecasting models and a local data snapshot. Only the price forecast enters scheduling.</p>
-    </form>
-    <div id="demandPanel" class="panel" hidden><h3>NSW regional demand · MW</h3><p id="demandSummary"></p><div class="chart"><canvas id="demandChart"></canvas></div></div>
-  </details>
-</section>
-<section id="results">
-  <h2>Did it save money?</h2>
-  <p id="resultPlaceholder">Run a schedule to see the estimated bill, the replayed bill and the checks.</p>
-  <div id="resultBody" hidden>
-    <p id="runSummary" class="notice" role="status"></p>
-    <div id="costs"></div>
-    <p>Estimated cost uses forecast prices. Replayed cost applies observed prices to the two fixed schedules under the same tariff assumption.</p>
-    <div class="controls"><button id="compareTariff">Try the flat tariff</button><button id="download">Download result JSON</button></div>
-    <div id="tariffComparison"></div>
-    <section id="hedgeResult" class="panel" hidden>
-      <h3>How the hedge changes electricity expense</h3>
-      <p id="hedgeSummary"></p><div id="hedgeCosts"></div><p id="hedgeNote" class="small"></p>
+    <p id="resultsStatus" class="small" role="status"></p>
+    <div id="resultCards" class="case-grid"></div>
+  </section>
+
+  <section id="compare" class="view" hidden>
+    <div class="section-head">
+      <div><h2>Favourable against adverse</h2><p>22 October, where the hedge pays, beside 17 September, where the hedge costs. Forecast prices and observed prices are kept separate throughout.</p></div>
+    </div>
+    <h3>Which forecast gives the cheaper schedule?</h3>
+    <p id="decisionMeta">Run a historical case to compare all five forecasting methods on one workload and tariff.</p>
+    <div id="decisionRows" class="table-area"></div>
+    <details class="appendix"><summary>How the evaluation works</summary>
+      <p><strong>Price accuracy.</strong> MAE measures forecast error across all 48 half-hours.</p>
+      <p><strong>Decision quality.</strong> Each forecast produces its own LP schedule. The app freezes the schedules, then prices them with the same observed AEMO data. A negative difference means starting early cost less.</p>
+      <p><strong>Course methods.</strong> Lecture 1, p. 24 defines objective and constraints. Lecture 2, p. 3 gives the cost-minimising LP. The fixed-schedule shock comparison follows Lecture 12, p. 7. Lecture 12, p. 15 introduces CVaR optimisation as a possible next model once we have enough historical scenarios.</p>
+    </details>
+    <h3 class="rule">Six-date historical comparison</h3>
+    <p>Same 25 GPU-hours and linked tariff across all methods. The comparison is exploratory and does not select a new model.</p>
+    <div id="multiDayRows" class="table-area"></div>
+    <h3 class="rule">Two recorded hedge examples</h3>
+    <div class="plot"><canvas id="compareCanvas" role="img" aria-label="Saving at forecast prices and observed prices, with hedge payoff, for both demo cases"></canvas></div>
+    <div id="compareTable" class="table-area"></div>
+    <section id="freshCompare" hidden>
+      <h3>Fresh run against the frozen fixture</h3>
+      <p id="freshMeta" class="small"></p>
+      <div id="freshTable" class="table-area"></div>
     </section>
-    <div class="panel"><h3>When each plan runs the GPUs</h3><div class="chart"><canvas id="scheduleChart"></canvas></div></div>
-    <details class="demo-details"><summary>Assumptions and independent checks</summary><p id="runMeta" class="small"></p><div id="assumptions"></div><div id="checks"></div><p id="limits" class="small"></p></details>
-  </div>
-</section>
-<section id="evidence">
-  <h2>What the six-day test showed</h2>
-  <div class="study-results">
-    <div><strong>4 of 6 days</strong><span>Lower replayed cost with the linked tariff and standard workload. Two days cost more.</span></div>
-    <div><strong>AUD 0</strong><span>Timing savings on each flat-tariff day.</span></div>
-    <div><strong>36 of 36</strong><span>Plan checks passed across 18 cases.</span></div>
-  </div>
-  <p>One day accounted for about 86% of the six-day net savings. This is a small historical test with a simulated tariff and workload.</p>
-  <details class="demo-details"><summary>How the scheduling and checks work</summary>
-    <dl><dt>Start early</dt><dd>Run each job as early as capacity allows.</dd><dt>Linear programming</dt><dd>Choose GPU time per half-hour to minimize rate × energy, while meeting the work, deadline and power limits.</dd><dt>Independent check</dt><dd>Recalculate completed GPU-hours, power and cost using the returned schedule.</dd></dl>
-    <p>A stronger next test would use a real tariff and measured site workload, then test more dates and price scenarios.</p>
-    <div id="methodMap"></div>
-  </details>
-</section>
+  </section>
+
+  <section id="forecast" class="view">
+    <div class="section-head">
+      <div><h2>Wholesale price by half-hour</h2><p id="forecastMeta">Waiting for forecast data.</p></div>
+      <label id="chartModelLabel" hidden>Chart comparison<select id="chartModel"></select></label>
+    </div>
+    <div class="plot"><canvas id="priceCanvas" role="img" aria-label="Forecast and observed wholesale prices in Australian dollars per megawatt-hour"></canvas></div>
+    <div class="section-head subhead">
+      <div><h3>Model error on the selected day</h3><p id="metricNote">MAE and RMSE use the same observed intervals for each model. Lower is better.</p></div>
+    </div>
+    <div id="metrics" class="table-area"></div>
+    <details class="appendix"><summary>Inspect forecast and observed values</summary><div id="priceRows"></div></details>
+  </section>
+
+  <section id="data" class="view" hidden>
+    <div class="section-head">
+      <div><h2>AEMO price and demand records</h2><p>Browse the archive independently of the model run.</p></div>
+      <form id="dataForm" class="inline-form"><label>Market day<input id="dataDay" type="date" value="2026-10-22" required></label><button type="submit">Load day</button></form>
+    </div>
+    <div class="data-toolbar">
+      <label>View<select id="dataFormat"><option value="raw">Original CSV rows</option><option value="processed">Half-hour model data</option></select></label>
+      <button id="downloadData" type="button" disabled>Download CSV</button>
+      <a href="https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data" target="_blank" rel="noopener noreferrer">AEMO source ↗</a>
+    </div>
+    <p id="dataStatus" class="small" role="status"></p>
+    <div id="dataRows" class="table-area market-table"></div>
+    <details class="appendix"><summary>Source file and verification</summary><p id="sourceMeta"></p></details>
+
+    <h3 class="rule">Bundled model weights</h3>
+    <p id="weightsMeta" class="small">Loading weight identity…</p>
+    <div id="weightsRows" class="table-area"></div>
+
+    <h3 class="rule">Forecast export provenance</h3>
+    <p id="importMeta" class="small"></p>
+    <div id="importRows" class="table-area"></div>
+
+    <h3 class="rule">History rows used for this day</h3>
+    <p id="historyMeta" class="small"></p>
+    <div id="historyRows" class="table-area"></div>
+  </section>
+
+  <section id="schedule" class="view" hidden>
+    <div class="section-head">
+      <div><h2>Schedule and electricity cost</h2><p id="scheduleMeta">Run the model or load the recorded example.</p></div>
+      <div class="actions"><button type="button" id="compareTariff" disabled>Compare flat tariff</button><button type="button" id="downloadRun" disabled>Download result JSON</button></div>
+    </div>
+    <h3>When should each job run?</h3>
+    <p><strong>Start early:</strong> run each job as soon as its allowed window opens and GPUs are free. <strong>LP schedule:</strong> move the same work into cheaper forecast slots while meeting the deadline and power limits.</p>
+    <p id="planGuide"></p>
+    <div id="jobTimes" class="table-area"></div>
+    <h3>What would each plan cost?</h3>
+    <p>Forecast budget uses prices known for planning. Observed-price replay applies later AEMO prices to the same two schedules.</p>
+    <div id="costRows" class="table-area"></div>
+    <div id="tariffRows" class="table-area"></div>
+    <h3>GPUs in use by half-hour</h3>
+    <div class="plot schedule-plot"><canvas id="scheduleCanvas" role="img" aria-label="GPU allocations for the start-early and LP schedules"></canvas></div>
+    <h3>Independent schedule checks</h3>
+    <div id="checks" class="table-area"></div>
+    <details class="appendix"><summary>Inspect half-hour GPU allocations</summary><div id="allocationRows"></div></details>
+    <section id="hedgePanel" hidden>
+      <h3>Simulated contract for difference</h3><p id="hedgeMeta"></p><div id="hedgeRows" class="table-area"></div>
+    </section>
+  </section>
+  <section id="live" class="view" hidden>
+    <div class="section-head">
+      <div><h2>Live NSW1 market and plan</h2><p>Refresh the latest completed five-minute interval, or plan up to 24 hours with AEMO’s half-hour Pre-dispatch forecasts.</p></div>
+    </div>
+    <div class="actions">
+      <button type="button" id="refreshLive">Refresh AEMO observations</button>
+      <button type="button" id="planLive">Run from AEMO forecast</button>
+    </div>
+    <p id="liveStatus" class="small" role="status"></p>
+    <div id="liveRows" class="table-area"></div>
+    <p><a id="liveSource" target="_blank" rel="noopener noreferrer" hidden>Open the AEMO report</a></p>
+    <p>Live planning uses the selected workload, retail tariff and hedge terms above. This demo uses shorter job windows based on when the available forecast starts. Observed replay stays pending.</p>
+  </section>
+  <section id="replay" class="view" hidden>
+    <div class="section-head">
+      <div><h2>Offline replay of observed prices</h2><p>Finalized half-hour observations for a chosen day. This is a replay of saved data and is kept separate from any live feed.</p></div>
+      <form id="replayForm" class="inline-form"><label>Replay day<input id="replayDay" type="date" value="2026-10-22" required></label><button type="submit">Load replay</button></form>
+    </div>
+    <div class="replay-flags">
+      <span class="pill">Live feed: <strong id="liveFlag">not exercised</strong></span>
+      <span class="pill">Source: <strong id="replaySource">observed history</strong></span>
+      <span class="pill">Intervals: <strong id="replayCount">—</strong></span>
+    </div>
+    <p id="replayStatus" class="small" role="status"></p>
+    <div class="plot"><canvas id="replayCanvas" role="img" aria-label="Observed half-hour wholesale prices for the replay day"></canvas></div>
+    <div id="replayStats" class="table-area"></div>
+    <details class="appendix"><summary>Inspect all 48 observed values</summary><div id="replayRows"></div></details>
+  </section>
+
+  <footer>Market observations from AEMO. Site, GPU workloads, retail tariffs and hedge terms are simulated.</footer>
 </main>
-<script src="/chart.js"></script><script src="/app.js"></script>
 </body>
 </html>
