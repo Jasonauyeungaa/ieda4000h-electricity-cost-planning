@@ -639,7 +639,7 @@ document.querySelectorAll('[data-preset]').forEach(button => button.addEventList
 document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => switchView(button.dataset.view)));
 $('reproLink').addEventListener('click', () => switchView('compare'));
 
-// Keyboard shortcuts, matching the sibling app's behaviour.
+// Keyboard shortcuts: 1-N switch views, r runs the model, Escape returns to Results.
 // Guard: never fire while focus is inside a text field, or editing a day or a filename
 // would switch views underneath the user. Escape is handled BEFORE that guard so it can
 // always get the user out, and modifier chords are left to the browser.

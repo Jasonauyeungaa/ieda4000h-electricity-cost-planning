@@ -75,7 +75,9 @@ class Handler(BaseHTTPRequestHandler):
     if base.resolve() in f.parents and f.is_file() and f.suffix in ['.html','.css','.js','.png','.svg','.woff','.woff2']:
      import mimetypes;self.send(f.read_bytes(),mimetypes.guess_type(str(f))[0] or 'application/octet-stream');return
    if p.path=='/':self.send((UI/'index.html').read_bytes(),'text/html; charset=utf-8');return
-   if p.path in ['/app.js','/app.css','/chart.js']:self.send((UI/p.path[1:]).read_bytes(),'text/css' if p.path.endswith('.css') else 'text/javascript');return
+   if p.path in ['/app.js','/app.css','/chart.js','/favicon.svg']:
+    kind='text/css' if p.path.endswith('.css') else ('image/svg+xml' if p.path.endswith('.svg') else 'text/javascript')
+    self.send((UI/p.path[1:]).read_bytes(),kind);return
    self.reply({'error':'Not found'},404)
   except (ValueError,KeyError,TypeError,FileNotFoundError) as e:self.reply({'error':str(e)},400)
  def do_POST(self):
