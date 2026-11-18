@@ -10,8 +10,7 @@ key and no manual step**.
 
 ## Setup
 
-Use Python 3.12 or newer — the bundled `.venv` is 3.12.9 — and keep the `Data` folder next to
-`Project`.
+Use Python 3.12 or newer and keep the `Data` folder next to `Project`.
 
 ```sh
 cd Project
