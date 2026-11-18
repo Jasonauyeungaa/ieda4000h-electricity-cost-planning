@@ -1,10 +1,12 @@
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse,parse_qs
-import argparse,json,re,threading,time,uuid
+import argparse,hashlib,json,re,threading,time,uuid
 from . import core, workbench, live_market
 from predict import generate
 UI=Path(__file__).parent/'ui'
+DEFAULT_PORT = 8156
+WORKBENCH_ID = hashlib.sha256(str(core.ROOT.resolve()).encode()).hexdigest()
 JOBS={};JOBS_LOCK=threading.Lock();MAX_JOBS=20
 LOGS=core.DATA/'app-logs'
 def start_job(body):
@@ -61,6 +63,7 @@ class Handler(BaseHTTPRequestHandler):
   try:
    if p.path=='/api/live/dispatch':self.reply(live_market.observation());return
    if p.path=='/api/planning-evaluation':self.reply(workbench.planning_evaluation());return
+   if p.path=='/api/health':self.reply({'workbench':WORKBENCH_ID,'solver':core.model.SOLVER});return
    if p.path=='/api/reference':self.reply(workbench.reference_case());return
    if p.path=='/api/market':self.reply(workbench.market_day(q.get('day',[''])[0]));return
    if p.path=='/api/imports':self.reply(core.discover());return
@@ -102,8 +105,24 @@ class Handler(BaseHTTPRequestHandler):
    self.reply({'error':'Not found'},404)
   except (ValueError,KeyError,TypeError) as e:self.reply({'error':str(e)},400)
   except Exception as e:self.reply({'error':str(e)},500)
+def create_server(port=DEFAULT_PORT):
+    return ThreadingHTTPServer(('127.0.0.1', port), Handler)
+
+
+def serve(server):
+    with server:
+        print(f'Optimization study: http://127.0.0.1:{server.server_port}/', flush=True)
+        try:
+            server.serve_forever()
+        except KeyboardInterrupt:
+            pass
+
+
 def main():
- p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=8156);a=p.parse_args();s=ThreadingHTTPServer(('127.0.0.1',a.port),Handler);print('Optimization study: http://127.0.0.1:'+str(a.port),flush=True)
- try:s.serve_forever()
- except KeyboardInterrupt:s.server_close()
-if __name__=='__main__':main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--port', type=int, default=DEFAULT_PORT)
+    serve(create_server(parser.parse_args().port))
+
+
+if __name__ == '__main__':
+    main()

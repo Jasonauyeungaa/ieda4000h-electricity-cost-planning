@@ -28,6 +28,7 @@ def main():
                         'cheaper': sum(value > 1e-7 for value in savings),
                         'more_expensive': sum(value < -1e-7 for value in savings)})
     result = {'dates': dates, 'scenario': 'standard', 'tariff': 'linked',
+              'solver': core.model.SOLVER,
               'methods': methods, 'by_day': by_day}
     path = outputs / 'planning_model_evaluation.json'
     path.write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')

@@ -7,7 +7,7 @@ What it does, in order:
   1. read the contract/workload packet (JSON, schema_version "1.0")
   2. validate it (schema.validate): tariffs, windows, jobs, units, feasibility
   3. run the ASAP baseline (work-conserving greedy, tie = earliest deadline then job id)
-  4. run the cost-minimizing LP optimizer (pulp-CBC, preemptible/divisible model)
+  4. run the cost-minimizing LP optimizer (CVXPY / HiGHS, preemptible/divisible model)
   5. run the INDEPENDENT checker (checker.evaluate) on BOTH schedules; this
      recomputes work/energy/cost from scratch (it never imports the solver code)
   6. run brute-force enumeration corroboration when the instance is tiny
@@ -154,7 +154,7 @@ def _build_summary(packet: Dict[str, Any], validation: List[str],
     a(f"  validation : {'PASS' if not validation else 'FAIL: ' + '; '.join(validation)}")
     a("")
     for tag, out, chk in (("ASAP BASELINE (work-conserving, tie=deadline then id)", asap_out, chk_asap),
-                          ("OPTIMIZER (pulp-CBC, min-cost LP)", opt_out, chk_opt)):
+                          (f"OPTIMIZER ({opt_out['meta']['solver']}, min-cost LP)", opt_out, chk_opt)):
         s = out["summary"]
         active = _active_intervals(out)
         a(tag)

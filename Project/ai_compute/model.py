@@ -1,10 +1,10 @@
-"""ai_compute cost-minimizing schedule model (LP via pulp).
+"""AI computing cost-minimizing schedule model (LP via CVXPY and HiGHS).
 
 Model (units explicit):
   decision x[j,t] = average active-GPU equivalents for job j in interval t
   constraints:
     sum_t x[j,t] * interval_hours_t  == required_gpu_hours_j        (work equality)
-    x[j,t] = 0 outside [release, deadline)                          (by variable set)
+    x[j,t] = 0 outside [release, deadline)                          (by upper bound)
     x[j,t] <= max_parallel_gpu_j                                    (per-job parallelism)
     sum_j x[j,t] <= flex_compute_capacity_gpu                       (total capacity)
     PUE * (it_base_load_kw + incremental_kw_per_gpu * sum_j x[j,t]) <= grid_power_cap_kw
@@ -14,21 +14,23 @@ Model (units explicit):
     grid energy = grid power * interval_hours                                (kWh)
     cost        = price[t] * grid energy                                     (currency)
   objective: minimize sum_t price[t] * grid_power[t] * interval_hours_t
-  (constant base-load term dropped from objective — it does not change argmin)
 
 Preemptible/divisible only: x continuous in [0, ...]; no integer/non-preemptive claims.
 
-Attribution: LP pattern (pulp-CBC, minimize sum(rate*grid*hours), analytic infeas
+Attribution: original LP formulation (minimize sum(rate*grid*hours), analytic infeas
 pre-check + post guard) adapted from h/scheduler/core.py::schedule (EV scope).
 """
 from __future__ import annotations
 
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
-import pulp
+import cvxpy as cp
+import numpy as np
 
-from .common import TOL_ENERGY, TOL_GPU, TOL_MONEY, r12
+from .common import TOL_ENERGY, TOL_GPU, r12
 from .schema import compute_derived, validate
+
+SOLVER = "CVXPY / HiGHS"
 
 
 def _feas_precheck(der: Dict[str, Any]) -> List[str]:
@@ -84,7 +86,7 @@ def schedule(packet: Dict[str, Any]) -> Dict[str, Any]:
                 allocations_gpu {job_id: x}, total_allocation_gpu,
                 it_power_kw, grid_power_kw, grid_energy_kwh, price, cost}
       summary: total GPU-hours, total grid energy kWh, total cost, budget headroom/overrun
-      solver: "pulp-CBC"
+      solver: "CVXPY / HiGHS"
     """
     errs = validate(packet)
     if errs:
@@ -96,61 +98,36 @@ def schedule(packet: Dict[str, Any]) -> Dict[str, Any]:
     n_t = len(intervals)
     incr, base, pue = site["incremental_kw_per_gpu"], site["it_base_load_kw"], site["pue"]
     cap, flex = site["grid_power_cap_kw"], site["flex_compute_capacity_gpu"]
-    currency = site["currency"]
-
     reasons = _feas_precheck(der)
     if reasons:
-        return _make_output(packet, "infeasible", reasons, [], "pulp-CBC (pre-check)")
+        return _make_output(packet, "infeasible", reasons, [], f"{SOLVER} (pre-check)")
 
-    # per-job allowed interval set: t inside [release, deadline)
-    def in_window(j: Dict[str, Any], t: int) -> bool:
-        s, e = intervals[t][0], intervals[t][1]
-        return j["release"] <= s and e <= j["deadline"]  # end may touch deadline
-
-    # ---- LP ----
-    prob = pulp.LpProblem("ai_compute_min_cost", pulp.LpMinimize)
-    x: Dict[Tuple[str, int], pulp.LpVariable] = {}
-    for j in jobs:
-        for t in range(n_t):
-            if not in_window(j, t):
-                continue
-            ub = min(j["max_parallel_gpu"], flex)
-            x[(j["id"], t)] = pulp.LpVariable(f"x_{j['id']}_{t}", lowBound=0, upBound=ub)
-
-    # work equality per job
-    for j in jobs:
-        prob += (
-            pulp.lpSum(x[(j["id"], t)] * intervals[t][2]
-                       for t in range(n_t) if (j["id"], t) in x)
-            == j["required_gpu_hours"]
-        )
-    # total capacity per interval
-    for t in range(n_t):
-        prob += (
-            pulp.lpSum(x[(j["id"], t)] for j in jobs if (j["id"], t) in x)
-            <= flex
-        )
-    # grid cap per interval: PUE*(base + incr*sumx) <= cap  (only if cap set)
+    allowed = np.array([
+        [job["release"] <= start and end <= job["deadline"] for start, end, _ in intervals]
+        for job in jobs
+    ])
+    parallel_limits = np.array([min(job["max_parallel_gpu"], flex) for job in jobs])
+    interval_hours = np.array([duration for _, _, duration in intervals])
+    required_work = np.array([job["required_gpu_hours"] for job in jobs])
+    allocation = cp.Variable((len(jobs), n_t), nonneg=True)
+    total_gpus = cp.sum(allocation, axis=0)
+    grid_power = pue * (base + incr * total_gpus)
+    constraints = [
+        allocation <= allowed * parallel_limits[:, None],
+        allocation @ interval_hours == required_work,
+        total_gpus <= flex,
+    ]
     if cap is not None:
-        for t in range(n_t):
-            prob += (
-                pue * (base + incr * pulp.lpSum(x[(j["id"], t)] for j in jobs if (j["id"], t) in x))
-                <= cap
-            )
+        constraints.append(grid_power <= cap)
 
-    # objective: minimize sum price*PUE*(base + incr*sumx)*hours  (base constant, keep for clarity)
-    obj_terms = []
-    for t in range(n_t):
-        sumx = pulp.lpSum(x[(j["id"], t)] for j in jobs if (j["id"], t) in x)
-        grid_kw = pue * (base + incr * sumx)
-        obj_terms.append(rates[t] * grid_kw * intervals[t][2])
-    prob += pulp.lpSum(obj_terms)
+    forecast_cost = cp.sum(cp.multiply(np.asarray(rates) * interval_hours, grid_power))
+    problem = cp.Problem(cp.Minimize(forecast_cost), constraints)
+    problem.solve(solver=cp.HIGHS)
+    if problem.status != cp.OPTIMAL:
+        reasons.append(f"solver_status: {problem.status}")
+        return _make_output(packet, "infeasible", reasons, [], SOLVER)
 
-    solver = pulp.PULP_CBC_CMD(msg=False)
-    status = prob.solve(solver)
-    if pulp.LpStatus[status] != "Optimal":
-        reasons.append(f"solver_status: {pulp.LpStatus[status]}")
-        return _make_output(packet, "infeasible", reasons, [], "pulp-CBC")
+    allocation_values = allocation.value
 
     # ---- build rows + post-guards ----
     rows: List[Dict[str, Any]] = []
@@ -159,9 +136,9 @@ def schedule(packet: Dict[str, Any]) -> Dict[str, Any]:
     total_cost = 0.0
     for t in range(n_t):
         alloc: Dict[str, float] = {}
-        for j in jobs:
-            if (j["id"], t) in x:
-                alloc[j["id"]] = max(0.0, float(x[(j["id"], t)].value()))
+        for job_index, job in enumerate(jobs):
+            if allowed[job_index, t]:
+                alloc[job["id"]] = max(0.0, float(allocation_values[job_index, t]))
         sumx = sum(alloc.values())
         it_kw = base + incr * sumx
         grid_kw = pue * it_kw
@@ -203,9 +180,9 @@ def schedule(packet: Dict[str, Any]) -> Dict[str, Any]:
                 reasons.append(f"post_solve_check_failed: interval {t} grid power exceeds cap")
 
     if reasons:
-        return _make_output(packet, "infeasible", reasons, rows, "pulp-CBC (post-guard)")
+        return _make_output(packet, "infeasible", reasons, rows, f"{SOLVER} (post-guard)")
 
-    return _make_output(packet, "feasible", [], rows, "pulp-CBC",
+    return _make_output(packet, "feasible", [], rows, SOLVER,
                         total_gpu_h, total_energy, total_cost)
 
 

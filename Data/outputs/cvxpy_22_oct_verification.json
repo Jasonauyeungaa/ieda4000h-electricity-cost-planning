@@ -1,0 +1,77 @@
+{
+  "day": "2026-10-22",
+  "scenario": "standard",
+  "tariff": "linked",
+  "forecast_source": "built_during_run:2026-10-22",
+  "model": "lstm",
+  "model_version": "m3_20261110T081713Z",
+  "export_id": "e3db8e85dee9ace199ff7bc4",
+  "run_id": "schedule_20261118T094012393433",
+  "forecast_mae_aud_per_mwh": 28.187417356703012,
+  "gpu_hours_delivered": 25.0,
+  "total_grid_energy_kwh": 254.0625,
+  "movable_energy_kwh": 14.0625,
+  "movable_energy_share_pct": 5.535055350553505,
+  "movable_cost": {
+    "asap_aud": 2.345408971238136,
+    "lp_aud": 2.203871962237358,
+    "asap_share_pct": 4.719461868055839,
+    "lp_share_pct": 4.447325389280488
+  },
+  "forecast_priced": {
+    "asap_cost_aud": 49.696533986497,
+    "lp_cost_aud": 49.554996977496,
+    "saving_aud": 0.14153700900099864,
+    "saving_pct_of_bill": 0.2848025760497815
+  },
+  "observed_priced": {
+    "asap_cost_aud": 55.888966489583,
+    "lp_cost_aud": 55.607867427083,
+    "saving_aud": 0.2810990624999974,
+    "saving_pct_of_bill": 0.5029598508542661
+  },
+  "delta_forecast_pct": 6.0346408978755095,
+  "delta_observed_pct": 10.192778570427441,
+  "checker_verdicts": {
+    "asap": "PASS",
+    "lp": "PASS"
+  },
+  "checks": {
+    "all_jobs_within_window": true,
+    "grid_power_cap_kw": 40.0,
+    "max_grid_power_kw": 14.5,
+    "grid_power_within_cap": true,
+    "per_job": {
+      "batch-a": {
+        "required_gpu_hours": 6.0,
+        "delivered_gpu_hours": 6.0,
+        "window_hours": 8.0,
+        "within_window": true
+      },
+      "batch-b": {
+        "required_gpu_hours": 9.0,
+        "delivered_gpu_hours": 9.0,
+        "window_hours": 10.0,
+        "within_window": true
+      },
+      "nightly": {
+        "required_gpu_hours": 10.0,
+        "delivered_gpu_hours": 10.0,
+        "window_hours": 4.0,
+        "within_window": true
+      }
+    }
+  },
+  "hedge": {
+    "strike_aud_per_mwh": 100.0,
+    "coverage": 0.5,
+    "hedged_kw": 5.0,
+    "hedged_mwh": 0.12,
+    "forecast_payoff_aud": 0.4608223724365234,
+    "forecast_net_cost_aud": 49.09417460505948,
+    "observed_payoff_aud": 1.9818791666666669,
+    "observed_net_cost_aud": 53.625988260416335
+  },
+  "solver": "CVXPY / HiGHS",
+  "executed_at": "2026-11-18T09:40:12.393540+00:00"
+}

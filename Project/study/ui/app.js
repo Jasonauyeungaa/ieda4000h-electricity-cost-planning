@@ -330,6 +330,10 @@ async function loadEvaluation() {
   evaluationLoaded = true;
   try {
     const data = await api('/api/planning-evaluation');
+    if (data.solver) {
+      $('multiDaySolver').textContent = 'Optimisation uses ' + data.solver + '.';
+      $('multiDaySolver').hidden = false;
+    }
     table('multiDayRows', ['Forecast used for LP', 'Mean price MAE', 'Mean replay saving', 'Median replay saving', 'Days cheaper', 'Days more expensive'],
       data.methods.map(row => [modelName(row.model), decimal(row.mean_mae) + ' A$/MWh', aud(row.mean_saving),
         aud(row.median_saving), row.cheaper + ' / ' + data.dates.length, row.more_expensive + ' / ' + data.dates.length]));
@@ -756,4 +760,9 @@ async function init() {
     syncControls();
   }
 }
-init();
+if (window.location.protocol !== 'file:') {
+  $('launchHelp').hidden = true;
+  $('workbenchApp').hidden = false;
+  init();
+  if (window.location.hash === '#live') switchView('live');
+}

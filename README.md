@@ -16,9 +16,9 @@ python3.12 -m venv .venv
 .venv/bin/python -m unittest study.test_optimization
 ```
 
-The model and solver were tested with Python 3.12.9, PuLP 3.3.2 (CBC), NumPy 2.5.4, pandas 3.1.1 and PyTorch 2.15.0 on macOS arm64. Installation requires network access. The cases run locally afterwards. On Windows, use the virtual environment's `Scripts/python.exe`.
+The model and solver were tested with Python 3.12.9, CVXPY 1.9.2 with HiGHS 1.16.0, NumPy 2.5.4, pandas 3.1.1 and PyTorch 2.15.0 on macOS arm64. Installation requires network access. The cases run locally afterwards. On Windows, use the virtual environment's `Scripts/python.exe`.
 
-The command builds a 48-slot LSTM forecast from the bundled history and weight files, then writes a timestamped directory in `Data/outputs`. `forecast_*.json` contains the price series and provenance. `schedule_*.json` contains both schedules and checker reports. `summary.json` and `summary.txt` show the budgets and settlement. Use `--out-root` to write elsewhere. The 22 October case should deliver 25 GPU-hours for each plan with two PASS verdicts. The start-early and LP budgets are A$49.6965 and A$49.5550. Repricing the same schedules gives A$55.8890 and A$55.6079.
+The command builds a 48-slot LSTM forecast from the bundled history and weight files, then writes a timestamped directory in `Data/outputs`. `forecast_*.json` contains the price series and provenance. `schedule_*.json` contains both schedules and checker reports. `summary.json` and `summary.txt` show the budgets and settlement. Use `--out-root` to write elsewhere. The 22 October case should deliver 25 GPU-hours for each plan with two PASS verdicts. The start-early and LP budgets are A$49.6965 and A$49.5550. Repricing the same schedules gives A$55.8890 and A$55.6079. See the [CVXPY verification record](Data/outputs/cvxpy_22_oct_verification.json).
 
 Use `--day 2026-09-17 --scenario more-work` with the same strike to reproduce the second recorded case. To run from an included forecast instead of doing inference, use:
 
@@ -30,14 +30,14 @@ Use `--day 2026-09-17 --scenario more-work` with the same strike to reproduce th
 
 After installing dependencies, double-click `Project/START_WEBAPP.command` on macOS, or run
 `.venv/bin/python -m study.server` from `Project` and open [the local workbench](http://127.0.0.1:8156/).
-The HTML, CSS and JavaScript are in `Project/study/ui`. The browser calls the local Python
+Use the launch command rather than opening `index.html` directly. The launcher can choose another port when the default port is in use. The HTML, CSS and JavaScript are in `Project/study/ui`. The browser calls the local Python
 server to run real inference and optimization. It can inspect the original monthly AEMO CSV
 rows and view both schedules, costs and the independent checks.
 
 Run the historical demo with **22 Oct demo → Run model → Results**. In **Compare**, the app
 shows each model's price error and how much its independently checked schedule would cost at
 the same later-observed prices. The [six-date results](Data/outputs/planning_model_evaluation.json)
-can be rebuilt with `.venv/bin/python -m study.evaluate_planning`.
+were regenerated with CVXPY and can be rebuilt with `.venv/bin/python -m study.evaluate_planning`. The original WorkSwarm fixture files and recorded demonstration document the earlier PuLP/CBC runs.
 
 In **Live AEMO**, refresh the five-minute observation or run a plan on AEMO's latest
 Pre-dispatch report. The live buttons require internet access and no API key. Job windows in
@@ -52,7 +52,7 @@ Follow [compare-ai-electricity-cost](Project/skills/compare-ai-electricity-cost/
 .venv/bin/python optimize.py --input imports/forecast_aac8fe2222acaca756808516.json --scenario more-work --tariff linked
 ```
 
-Inputs are versioned NSW1 forecast JSON with 48 continuous half-hours, market time UTC+10, price in AUD/MWh and available observed values for replay. Choose another valid forecast and case, then check job hours, capacity, grid power and cost. The import validator rejects malformed packets. If observed prices are incomplete, the historical replay remains pending. [The clean-copy run record](Data/outputs/skill_reuse_20261114_clean_copy.json) documents manual self-reproduction. [Evidence/](Evidence/) links native WorkSwarm tool calls to saved numerical output.
+Inputs are versioned NSW1 forecast JSON with 48 continuous half-hours, market time UTC+10, price in AUD/MWh and available observed values for replay. Choose another valid forecast and case, then check job hours, capacity, grid power and cost. The import validator rejects malformed packets. If observed prices are incomplete, the historical replay remains pending. [The CVXPY clean-copy run record](Data/outputs/skill_reuse_cvxpy_clean_copy.json) documents manual self-reproduction for this version. The earlier PuLP/CBC run is preserved with the WorkSwarm records. [Evidence/](Evidence/) links native WorkSwarm tool calls to saved numerical output.
 
 ## Data and scope
 

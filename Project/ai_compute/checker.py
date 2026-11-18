@@ -258,7 +258,7 @@ def evaluate(packet: Dict[str, Any], out: Dict[str, Any]) -> Dict[str, Any]:
 def enumerate_optimal(packet: Dict[str, Any]) -> Dict[str, Any]:
     """Brute-force min-cost schedule over a coarse GPU grid for tiny instances.
 
-    Structurally different from the LP solver (pure enumeration, no pulp). Only runs
+    Structurally different from the LP solver (pure enumeration). Only runs
     when intervals <= _ENUM_MAX_INTERVALS and jobs <= _ENUM_MAX_JOBS; otherwise returns
     a skipped note (enumeration is a corroboration aid, not the product).
     """

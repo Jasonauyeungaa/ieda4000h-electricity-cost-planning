@@ -1,35 +1,42 @@
-"""Open the workbench, starting its local server when needed."""
+"""Open this copy of the workbench, starting a local server when needed."""
+import errno
 import json
-import threading
-import time
 import urllib.request
 import webbrowser
 
-from study.server import main
-
-URL = 'http://127.0.0.1:8156/'
+from study.server import DEFAULT_PORT, WORKBENCH_ID, core, create_server, serve
 
 
-def workbench_is_running():
+def url_for(port):
+    return f'http://127.0.0.1:{port}/'
+
+
+def workbench_is_running(url):
     try:
-        with urllib.request.urlopen(URL + 'api/reference', timeout=1) as response:
-            reference = json.load(response)
-        return reference.get('recorded') is True and 'run' in reference
+        with urllib.request.urlopen(url + 'api/health', timeout=1) as response:
+            health = json.load(response)
+        return health == {'workbench': WORKBENCH_ID, 'solver': core.model.SOLVER}
     except (OSError, ValueError):
         return False
 
 
-def open_when_ready():
-    for _ in range(30):
-        if workbench_is_running():
-            webbrowser.open(URL)
+def main():
+    default_url = url_for(DEFAULT_PORT)
+    if workbench_is_running(default_url):
+        webbrowser.open(default_url)
+        return
+    try:
+        server = create_server()
+    except OSError as error:
+        if error.errno != errno.EADDRINUSE:
+            raise
+        if workbench_is_running(default_url):
+            webbrowser.open(default_url)
             return
-        time.sleep(0.3)
+        server = create_server(0)
+    webbrowser.open(url_for(server.server_port))
+    serve(server)
 
 
 if __name__ == '__main__':
-    if workbench_is_running():
-        webbrowser.open(URL)
-    else:
-        threading.Thread(target=open_when_ready, daemon=True).start()
-        main()
+    main()

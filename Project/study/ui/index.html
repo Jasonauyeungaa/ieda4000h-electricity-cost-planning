@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Electricity Cost Planning · IEDA 4000H</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="stylesheet" href="/app.css">
-  <script defer src="/chart.js"></script>
-  <script defer src="/app.js"></script>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./app.css">
+  <script defer src="./chart.js"></script>
+  <script defer src="./app.js"></script>
 </head>
 <body>
 <header class="topbar">
@@ -17,7 +17,13 @@
     <span class="market-label"><i></i> NSW1 historical archive</span>
   </div>
 </header>
-<main class="shell">
+<main id="launchHelp" class="shell launch-help">
+  <h1>Open the electricity workbench</h1>
+  <p>Start the local Python app to load the archive, show charts and run the model.</p>
+  <p>On macOS, open <strong>Open Workbench.command</strong> in the submission's Demonstration folder, or <strong>START_WEBAPP.command</strong> in the Project folder. The launcher opens the correct address in your browser.</p>
+  <p>If the server is already running on the default port, <a href="http://127.0.0.1:8156/">open the local workbench</a>.</p>
+</main>
+<main id="workbenchApp" class="shell" hidden>
   <section class="intro">
     <div>
       <h1>Electricity Cost Planning<br> for AI Computing</h1>
@@ -115,6 +121,7 @@
     </details>
     <h3 class="rule">Six-date historical comparison</h3>
     <p>Same 25 GPU-hours and linked tariff across all methods. The comparison is exploratory and does not select a new model.</p>
+    <p id="multiDaySolver" class="small" hidden></p>
     <div id="multiDayRows" class="table-area"></div>
     <h3 class="rule">Two recorded hedge examples</h3>
     <div class="plot"><canvas id="compareCanvas" role="img" aria-label="Saving at forecast prices and observed prices, with hedge payoff, for both demo cases"></canvas></div>

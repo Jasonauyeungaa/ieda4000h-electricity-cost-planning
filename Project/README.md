@@ -118,7 +118,7 @@ cheaper slots. Both appear in `summary.json` as `movable_energy_share_pct` and
 `predict.py` writes a new price export under `Data/imports` and a regional demand report under
 `Data/outputs`, then prints both paths. To optimise from a newly generated forecast, pass the
 printed `file` value to `optimize.py --input`. The scheduling model uses declared site and
-workload assumptions; regional demand does not determine the site's GPU jobs.
+workload assumptions. CVXPY builds the LP and HiGHS solves it. The checker uses the returned schedule and original inputs to recompute work, power and cost.
 
 To import a different price forecast, put a versioned NSW1 `electricity.forecast.v2` file under
 `Data/imports` and use its relative path. The forecast determines both plans before observed

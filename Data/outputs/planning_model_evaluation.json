@@ -9,6 +9,7 @@
   ],
   "scenario": "standard",
   "tariff": "linked",
+  "solver": "CVXPY / HiGHS",
   "methods": [
     {
       "model": "lstm",
@@ -21,7 +22,7 @@
     {
       "model": "cnn",
       "mean_mae": 359.53766413865264,
-      "mean_saving": 18.515955406250008,
+      "mean_saving": 18.510334375000006,
       "median_saving": 0.11484074999999727,
       "cheaper": 5,
       "more_expensive": 1
@@ -29,7 +30,7 @@
     {
       "model": "fnn",
       "mean_mae": 361.5191099537743,
-      "mean_saving": 18.434432937500006,
+      "mean_saving": 18.431844187500005,
       "median_saving": 0.043439343750002024,
       "cheaper": 3,
       "more_expensive": 3
@@ -37,7 +38,7 @@
     {
       "model": "prev-day",
       "mean_mae": 368.7635821759259,
-      "mean_saving": 18.30100632812485,
+      "mean_saving": 18.27321615624985,
       "median_saving": 0.029643562500000442,
       "cheaper": 3,
       "more_expensive": 3
@@ -45,8 +46,8 @@
     {
       "model": "prev-week",
       "mean_mae": 365.518379648659,
-      "mean_saving": 23.16035428125,
-      "median_saving": 0.06484101562499944,
+      "mean_saving": 23.151579843750003,
+      "median_saving": 0.0385177031249988,
       "cheaper": 4,
       "more_expensive": 2
     }
@@ -184,9 +185,9 @@
         "bias": -18.312869423760308,
         "n": 48,
         "budget": 43.656178696418,
-        "replay": 50.523343333333,
+        "replay": 50.538875833333,
         "start_early_replay": 50.469759770833,
-        "saving": -0.05358356250000185,
+        "saving": -0.06911606250000091,
         "check": "PASS"
       },
       {
@@ -196,9 +197,9 @@
         "bias": -26.260807389153374,
         "n": 48,
         "budget": 40.114306208515,
-        "replay": 50.284274645833,
+        "replay": 50.318000833333,
         "start_early_replay": 50.469759770833,
-        "saving": 0.18548512499999958,
+        "saving": 0.15175893749999858,
         "check": "PASS"
       },
       {
@@ -220,9 +221,9 @@
         "bias": -54.045139118168095,
         "n": 48,
         "budget": 25.946247192097,
-        "replay": 50.374188583333,
+        "replay": 50.426835208333,
         "start_early_replay": 50.469759770833,
-        "saving": 0.09557118749999916,
+        "saving": 0.042924562499997876,
         "check": "PASS"
       },
       {
@@ -232,9 +233,9 @@
         "bias": -22.855833333333333,
         "n": 48,
         "budget": 40.95097925,
-        "replay": 50.640214708333,
+        "replay": 50.806955739583,
         "start_early_replay": 50.469759770833,
-        "saving": -0.17045493749999707,
+        "saving": -0.33719596875000235,
         "check": "PASS"
       }
     ],
